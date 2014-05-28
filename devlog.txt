@@ -1,4 +1,7 @@
 devlog created
 
 5/27 Maria:
-     I created the Driver class. This clas provides the user with a brief introcution to the program. So far it also allows the user to provide his/her name, gender, and occupation to become a member of the library.
+     I created the Driver class. This class provides the user with a brief introcution to the program. So far it also allows the user to provide his/her name, gender, and occupation to become a member of the library.
+
+5/27 Raheema 
+	Library class created. Parses file of books into an array. 
