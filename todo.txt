@@ -1,0 +1,5 @@
+Character:
+write new user information into file
+check if username already taken: (eventually use tree to store characters)
+encrypt password
+get login working 
