@@ -1,7 +1,18 @@
 devlog created
 
-5/27 Maria:
-     I created the Driver class. This class provides the user with a brief introcution to the program. So far it also allows the user to provide his/her name, gender, and occupation to become a member of the library.
+5/24-5/26 
+     The whole group emailed one another this long weekend to dicsuss possible topics for the final project. We  were thinking of doing something related to Ferry's because then we could make use of queues and stacks, but we could not figure out exactly what to do. Maria suggested the library proposal after staring at her book shelf.
 
-5/27 Raheema 
-	Library class created. Parses file of books into an array. 
+5/26 
+     We created a teamname and a repo and emailed Mr. Brown our written proposal for our library simulation.
+
+5/27
+     In class we decided what each person would be responsible to work on to start off the project. Fia is going to work on the Book Class. Raheema is going to work on the LIbary class and find a way to read the titles of books and the authors from a file and store that information in an ArrayList. This way all the books that exist for the library will always be available when the program runs. Maria will work on the Character class and the Driver class.
+     Maria:
+     For homework I created the Driver class. This class provides the user with a brief introduction to the program. So far it also allows the user to provide his/her name, gender, and occupation to become a member of the library.
+     Raheema;
+     Librray class created and book list added. Librray class currently parses book list into an array.
+
+5/28
+     In class today we all worked on our separate assignments. Fia worked on editing the list of books and authors which is a text file, and making it easier to parse. Raheema is working on the Character class. Maria is updating devlog.txt.
+     
