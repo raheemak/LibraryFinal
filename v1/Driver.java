@@ -53,6 +53,20 @@ public class Driver{
 	    }
 	    occupation = occupation.toLowerCase();
 	    
+	    
+	    System.out.print("Enter a username: ")
+
+	    String username  = scan.nextLine();
+	    if(occupation.isEmpty()){
+		while(occupation.isEmpty()){
+		      System.out.println("Enter a  ");
+		      username = scan.nextLine();
+		}
+	    }
+	    
+	    
+
+
 	    System.out.println(first);
 	    System.out.println(last);
 	    System.out.println(gender);
