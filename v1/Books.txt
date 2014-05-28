@@ -1,51 +1,87 @@
-1. Harry Potter (series), by J.K. Rowling
-3. The Chocolate War, by Robert Cormier
-4. And Tango Makes Three, by Justin Richardson/Peter Parnell
-5. Of Mice and Men, by John Steinbeck
-6. I Know Why the Caged Bird Sings, by Maya Angelou
-7. Scary Stories (series), by Alvin Schwartz
-8. His Dark Materials (series), by Philip Pullman
-9. ttyl; ttfn; l8r g8r (series), by Lauren Myracle
-10. The Perks of Being a Wallflower, by Stephen Chbosky
-11. Fallen Angels, by Walter Dean Myers
-12. It’s Perfectly Normal, by Robie Harris
-13. Captain Underpants (series), by Dav Pilkey
-14. The Adventures of Huckleberry Finn, by Mark Twain
-15. The Bluest Eye, by Toni Morrison
-16. Forever, by Judy Blume
-17. The Color Purple, by Alice Walker
-18. Go Ask Alice, by Anonymous
-19. Catcher in the Rye, by J.D. Salinger
-20. King and King, by Linda de Haan
-21. To Kill A Mockingbird, by Harper Lee
-22. Gossip Girl (series), by Cecily von Ziegesar
-23. The Giver, by Lois Lowry
-24. In the Night Kitchen, by Maurice Sendak
-25. Killing Mr. Griffen, by Lois Duncan
-26. Beloved, by Toni Morrison
-27. My Brother Sam Is Dead, by James Lincoln Collier
-28. Bridge To Terabithia, by Katherine Paterson
-29. The Face on the Milk Carton, by Caroline B. Cooney
-30. We All Fall Down, by Robert Cormier
-31. What My Mother Doesn’t Know, by Sonya Sones
-32. Bless Me, Ultima, by Rudolfo Anaya
-33. Snow Falling on Cedars, by David Guterson
-34. The Earth, My Butt, and Other Big, Round Things, by Carolyn Mackler
-35. Angus, Thongs, and Full Frontal Snogging, by Louise Rennison
-36. Brave New World, by Aldous Huxley
-37. It’s So Amazing, by Robie Harris
-38. Arming America, by Michael Bellasiles
-39. Kaffir Boy, by Mark Mathabane
-40. Life is Funny, by E.R. Frank
-41. Whale Talk, by Chris Crutcher
-42. The Fighting Ground, by Avi
-43. Blubber, by Judy Blume
-44. Athletic Shorts, by Chris Crutcher
-45. Crazy Lady, by Jane Leslie Conly
-46. Slaughterhouse-Five, by Kurt Vonnegut
-47. The Adventures of Super Diaper Baby: The First Graphic Novel by George Beard and Harold Hutchins, the creators of Captain Underpants, by Dav Pilkey
+1. Harry Potter and the Sorcerer's Stone (Harry Potter series), by J.K. Rowling
+2. Harry Potter and the Chamber of Secrets (Harry Potter series), by J.K. Rowling
+3. Harry Potter and the Prisoner of Azkaban (Harry Potter series), by J.K. Rowling
+4. Harry Potter and the Goblet of Fire (Harry Potter series), by J.K. Rowling
+5. Harry Potter and the Order of the Phoenix (Harry Potter series), by J.K. Rowling
+6. Harry Potter and the Half-Blood Prince (Harry Potter series), by J.K. Rowling
+7. Harry Potter and the Deathly Hallows (Harry Potter series), by J.K. Rowling
+8. The Chocolate War, by Robert Cormier
+9. And Tango Makes Three, by Justin Richardson/Peter Parnell
+10. Of Mice and Men, by John Steinbeck
+11. I Know Why the Caged Bird Sings, by Maya Angelou
+12. Scary Stories to Tell in the Dark (Scary Stories series), by Alvin Schwartz
+13. More Scary Stories to Tell in the Dark (Scary Stories series), by Alvin Schwartz
+14. Scary Stories 3: More Tales to Chill Your Bones (Scary Stories series), by Alvin Schwartz
+15. The Golden Compass (His Dark Materials series), by Philip Pullman
+16. The Subtle Knife (His Dark Materials series), by Philip Pullman
+17. The Amber Spyglass (His Dark Materials series), by Philip Pullman
+18. ttyl (Internet Girls series), by Lauren Myracle
+19. ttfn (Internet Girls series), by Lauren Myracle
+20. l8r g8r (Internet Girls series), by Lauren Myracle
+21. The Perks of Being a Wallflower, by Stephen Chbosky
+21. Fallen Angels, by Walter Dean Myers
+22. It's Perfectly Normal, by Robie Harris
+23. The Adventures of Captain Underpants (Captain Underpants series), by Dav Pilkey
+24. Captain Underpants and the Attack of the Talking Toilets (Captain Underpants series), by Dav Pilkey
+25. Captain Underpants and the Invasion of the Incredibly Naughty Cafeteria Ladies from Outer Space (and the Subsequent Assault of the Equally Evil Lunchroom Zombie Nerds) (Captain Underpants series), by Dav Pilkey
+26. Captain Underpants and the Perilous Plot of Professor Poopypants (Captain Underpants series), by Dav Pilkey
+27. Captain Underpants and the Wrath of the Wicked Wedgie Woman (Captain Underpants series), by Dav Pilkey
+28. Captain Underpants and the Big, Bad Battle of the Bionic Booger Boy, Part 1: The Night of the Nasty Nostril Nuggets (Captain Underpants series), by Dav Pilkey
+29. Captain Underpants and the Big, Bad Battle of the Bionic Booger Boy, Part 2: The Revenge of the Ridiculous Robo-Boogers (Captain Underpants series), by Dav Pilkey
+30. Captain Underpants and the Preposterous Plight of the Purple Potty People (Captain Underpants series), by Dav Pilkey
+31. Captain Underpants and the Terrifying Re-Turn of Tippy Tinkletrousers (Captain Underpants series), by Dav Pilkey
+32. Captain Underpants and the Revolting Revenge of the Radioactive Robo-Boxers (Captain Underpants series), by Dav Pilkey
+33. Captain Underpants and the Tyrannical Retaliation of the Turbo Toilet 2000 (Captain Underpants series), by Dav Pilkey
+34. Captain Underpants and the Sensational Saga of Sir Stinks-A-Lot (Captain Underpants series), by Dav Pilkey
+35. The Adventures of Huckleberry Finn, by Mark Twain
+36. The Bluest Eye, by Toni Morrison
+37. Forever, by Judy Blume
+38. The Color Purple, by Alice Walker
+39. Go Ask Alice, by Anonymous
+40. Catcher in the Rye, by J.D. Salinger
+41. King and King, by Linda de Haan
+42. To Kill A Mockingbird, by Harper Lee
+43. Gossip Girl (Gossip Girl series), by Cecily von Ziegesar
+44. You Know You Love Me (Gossip Girl series), by Cecily von Ziegesar
+45. All I Want Is Everything (Gossip Girl series), by Cecily von Ziegesar
+46. Because I'm Worth It (Gossip Girl series), by Cecily von Ziegesar
+47. I Like It Like That (Gossip Girl series), by Cecily von Ziegesar
+48. You're the One That I Want (Gossip Girl series), by Cecily von Ziegesar
+49. Nobody Does It Better (Gossip Girl series), by Cecily von Ziegesar
+50. Nothing Can Keep Us Together (Gossip Girl series), by Cecily von Ziegesar
+51. Only in Your Dreams (Gossip Girl series), by Cecily von Ziegesar
+52. Would I Lie to You? (Gossip Girl series), by Cecily von Ziegesar
+53. Don't You Forget About Me (Gossip Girl series), by Cecily von Ziegesar
+54. It Had To Be You (Gossip Girl series), by Cecily von Ziegesar
+55. I Will Always Love You (Gossip Girl series), by Cecily von Ziegesar
+56. Psycho Killer (Gossip Girl series), by Cecily von Ziegesar
+57. The Giver, by Lois Lowry
+58. In the Night Kitchen, by Maurice Sendak
+59. Killing Mr. Griffen, by Lois Duncan
+60. Beloved, by Toni Morrison
+61. My Brother Sam Is Dead, by James Lincoln Collier
+62. Bridge To Terabithia, by Katherine Paterson
+63. The Face on the Milk Carton, by Caroline B. Cooney
+64. We All Fall Down, by Robert Cormier
+65. What My Mother Doesnï¿½t Know, by Sonya Sones
+66. Bless Me, Ultima, by Rudolfo Anaya
+67. Snow Falling on Cedars, by David Guterson
+68. The Earth, My Butt, and Other Big, Round Things, by Carolyn Mackler
+69. Angus, Thongs, and Full Frontal Snogging, by Louise Rennison
+70. Brave New World, by Aldous Huxley
+71. It's So Amazing, by Robie Harris
+72. Arming America, by Michael Bellasiles
+73. Kaffir Boy, by Mark Mathabane
+74. Life is Funny, by E.R. Frank
+75. Whale Talk, by Chris Crutcher
+76. The Fighting Ground, by Avi
+77. Blubber, by Judy Blume
+78. Athletic Shorts, by Chris Crutcher
+79. Crazy Lady, by Jane Leslie Conly
+80. Slaughterhouse-Five, by Kurt Vonnegut
+81. The Adventures of Super Diaper Baby, by Dav Pilkey
 48. Rainbow Boys, by Alex Sanchez
-49. One Flew Over the Cuckoo’s Nest, by Ken Kesey
+49. One Flew Over the Cuckooï¿½s Nest, by Ken Kesey
 50. The Kite Runner, by Khaled Hosseini
 51. Daughters of Eve, by Lois Duncan
 52. The Great Gilly Hopkins, by Katherine Paterson
@@ -55,13 +91,13 @@
 56. When Dad Killed Mom, by Julius Lester
 57. Blood and Chocolate, by Annette Curtis Klause
 58. Fat Kid Rules the World, by K.L. Going
-59. Olive’s Ocean, by Kevin Henkes
+59. Oliveï¿½s Ocean, by Kevin Henkes
 60. Speak, by Laurie Halse Anderson
 61. Draw Me A Star, by Eric Carle
 62. The Stupids (series), by Harry Allard
 63. The Terrorist, by Caroline B. Cooney
 64. Mick Harte Was Here, by Barbara Park
-65. The Things They Carried, by Tim O’Brien
+65. The Things They Carried, by Tim Oï¿½Brien
 66. Roll of Thunder, Hear My Cry, by Mildred Taylor
 67. A Time to Kill, by John Grisham
 68. Always Running, by Luis Rodriguez
@@ -69,7 +105,7 @@
 70. Harris and Me, by Gary Paulsen
 71. Junie B. Jones (series), by Barbara Park
 72. Song of Solomon, by Toni Morrison
-73. What’s Happening to My Body Book, by Lynda Madaras
+73. Whatï¿½s Happening to My Body Book, by Lynda Madaras
 74. The Lovely Bones, by Alice Sebold
 75. Anastasia (series), by Lois Lowry
 76. A Prayer for Owen Meany, by John Irving
@@ -84,9 +120,9 @@
 85. Staying Fat for Sarah Byrnes, by Chris Crutcher
 86. Cut, by Patricia McCormick
 87. Tiger Eyes, by Judy Blume
-88. The Handmaid’s Tale, by Margaret Atwood
+88. The Handmaidï¿½s Tale, by Margaret Atwood
 89. Friday Night Lights, by H.G. Bissenger
-90. A Wrinkle in Time, by Madeline L’Engle
+90. A Wrinkle in Time, by Madeline Lï¿½Engle
 91. Julie of the Wolves, by Jean Craighead George
 92. The Boy Who Lost His Face, by Louis Sachar
 93. Bumps in the Night, by Harry Allard
