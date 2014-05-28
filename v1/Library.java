@@ -1,35 +1,51 @@
 import java.util.*;
-import java.lang.*;
+import java.io.*;
 
 public class Library {
 //reading csv file 
 
     ArrayList books; 
-    String[][ ] list;
+    //String[][ ] list;
     public Library (){
 	books= new ArrayList();
-	for (int x=0; x<list.length; x++){
-	}
     }
 
-    public String   makeArray(){
+    public static String  makeArray(){
 	//98 books, 2 fields each 
-	File file = new File("Books.txt")
-	list = new String[98][2];
+
+	String [][]list = new String[101][2];
 	int index=0;
-	Scanner doc= new Scanner (file);
-	while (doc.hasNextLine()){
-	    String line= doc.nextLine();
-	    String[]split = line.subString(line.indexOf(".")).split(", ");
-	    list[index]= split;
-	    index++;
+
+	try {
+	    File file = new File("Books.txt");
+	    Scanner doc= new Scanner (file);
+	    while (doc.hasNextLine()){
+		String line= doc.nextLine();
+		String[]split = (line.substring(line.indexOf(".")+2)).split(", by ");
+		list[index]= split;
+		index++;
+	    }
 	}
-	return list.toString();
+	
+	catch (FileNotFoundException e ){
+	    return "boo";
+	}
+
+	String z="{";
+
+	for (int x=0; x<100; x++){
+	    z+="{";
+	    z+=list[x][0];
+	    z+=",";
+	    z+=list[x][1];
+	    z+="}";
+	}
+	z+="}";
+	return z;
     }
 
     public static void main (String[]args){
-	Library temp= new Library();
-	System.out.println(temp.makeArray());
+	System.out.println(makeArray());
     }
     
 }
