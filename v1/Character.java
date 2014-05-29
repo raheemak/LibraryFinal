@@ -1,6 +1,5 @@
 public class Character{
     private String firstName, lastName, username, gender, password;
-    public ArrayLis
     
     public Character(){
 	firstName= "captain";
@@ -10,16 +9,41 @@ public class Character{
 	password= "123";
     }
 
+    /*
+    public Character (String firstName, String lastName, String username, 
+		      String gender, String password){
+	setName (firstName,lastName);
+	setGender(gender);
+	setuserName( username);
+	setPassword (password);
+	}*/
 
-    public Character (firstName, lastName, username, gender, password){
+
+    //setters & getters 
+
+    public void  setPassword(String pw){
+	password= pw;
     }
 
-    public String getFirst(){
-	return firstName;
+    public boolean setUsername(String un){
+	/*check whether username is available 
+	  if (taken)
+	    return false;
+	*/
+       	username= un;
+	return true;
     }
 
-    public String getLast (){
-	return lastName;
+    public void setGender (String g){
+	gender =g ;
+    }
+    public void setName (String fn, String ln ){
+	firstName= fn;
+	lastName= ln;
+    }
+
+    public String getName(){
+	return firstName+ " "+lastName;
     }
 
     public String getUsername(){
@@ -27,10 +51,7 @@ public class Character{
     }
 
     public String getPassword(){
+	return password;
     }
-
-    
-  
-
 
 }
