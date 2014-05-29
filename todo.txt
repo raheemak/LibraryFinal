@@ -3,3 +3,14 @@ write new user information into file
 check if username already taken: (eventually use tree to store characters)
 encrypt password
 get login working 
+
+Driver:
+access existing memberships to know which books which person has checked out (work w/ Character to get file of existing usernames and encrypted passwords.
+ability to see existing books (with filters? By letter, by author)
+ability to checkout (type checkout and enter)
+ability to return (type return and enter)
+Later: program wide thingy where library knows which user has which books, even if user isn't currently using prgrm.
+
+Book:
+when called, create a new ArrayList to represent the waiting list.
+bool var: available -- this means that books will never be erased from the directory; available will just be set to false.
