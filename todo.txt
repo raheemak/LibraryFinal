@@ -1,8 +1,10 @@
 Character:
 write new user information into file
-check if username already taken: (eventually use tree to store characters)
+check if username already taken using text file like Characters.txt (eventually use tree to store characters)
 encrypt password
 get login working 
+add methods for what books character has checked out, and what books character is waiting on
+Later: due dates for books?
 
 Driver:
 access existing memberships to know which books which person has checked out (work w/ Character to get file of existing usernames and encrypted passwords.
