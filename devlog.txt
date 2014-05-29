@@ -15,4 +15,5 @@ devlog created
 
 5/28
      In class today we all worked on our separate assignments. Fia worked on editing the list of books and authors which is a text file, and making it easier to parse. Raheema is working on the Character class. Maria is updating devlog.txt.
-     
+     Fia :
+     For homework I added a tiny tiny part of Book.java, with a constructor (not sure how a default constructor would work) and I managed to expand the list of the 100 banned books to the full 230-something, by changing all of the single entries that represented a series into multiple entries, for each book in the series.
