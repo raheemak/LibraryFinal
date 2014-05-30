@@ -15,8 +15,25 @@ ability to return (type return and enter)
 Later: program wide thingy where library knows which user has which books, even if user isn't currently using prgrm.
 
 Book:
-when called, create a new ArrayList to represent the waiting list.
+when called, create a new ArrayList to represent the waiting list (queue)
 bool var: available -- this means that books will never be erased from the directory; available will just be set to false.
 *QUEUE* after we get ArrayList working
 
-QuickSort, Binary Search, (Trees), 
+QuickSort, Binary Search, (Trees)
+
+
+-----------
+
+Book:
+- constructer method 
+- had queue as waitlist (get working with arraylist first)
+
+Library:
+- add method (uses binary search) to add file into arraylist
+- also rewrites file 
+
+this weekend :
+fia- encrypting password
+maria- waitlist 
+raheema- binary search, add new book 
+
