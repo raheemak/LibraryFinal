@@ -39,6 +39,10 @@ public class Book {
     public String nextInQ(){
 	return waitList.peekFront();
     }
+    
+    public String toString(){
+	return (title.trim()+",, "+author.trim());
+    }
 
     public static void main(String[] args){
 	Book Ron = new Book("Looking for Alaska", "John Green");
