@@ -1,5 +1,8 @@
 import java.io.*;
 import java.util.*;
+import java.util.Scanner;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;  
 
 public class Driver{
     public static void main(String[] args){
@@ -96,7 +99,7 @@ public class Driver{
 		    System.out.println("Enter a valid password");
 		    password = scan.nextLine();
 		}
-	    }
+	    }//some of the encryption code from http://www.codeobsessed.com/code/viewtopic.php?f=6&t=25
 	    
 	    /*todo: re-enter password
 	    String password2= scan.nextLine();
