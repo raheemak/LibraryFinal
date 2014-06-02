@@ -77,6 +77,20 @@ public class Driver{
 	    
 	    System.out.print("Enter a password: ");
 	    String password=scan.nextLine();
+            try
+            {
+               System.out.println("MD5 string: " + DemoMD5.MD5(password));
+            }
+       
+            catch (NoSuchAlgorithmException a)
+            {
+               a.printStackTrace();
+            }
+       
+            catch (UnsupportedEncodingException a)
+            {
+              a.printStackTrace();
+            }
 	    if(password.isEmpty()){
 		while(password.isEmpty()){
 		    System.out.println("Enter a valid password");
