@@ -38,7 +38,7 @@ public class Book {
 
     public String nextInQ(){
 	return waitList.peekFront();
-    }
+    }//
     
     public String toString(){
     	
