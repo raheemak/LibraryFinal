@@ -41,7 +41,8 @@ public class Book {
     }
     
     public String toString(){
-	return (title.trim()+",, "+author.trim());
+    	
+	return (getTitle() + ",, "+ getAuthor() + ",, " + getStatus() + ",, " +"<>");
     }
 
     public static void main(String[] args){
