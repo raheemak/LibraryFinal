@@ -23,3 +23,21 @@ devlog created
 
 5/30
 	In class, we finalized design aspects. We split up tasks for the weekend . 
+	
+5/31, 6/01:
+
+	Maria:
+	Uploaded LLNode.java, LLQueue.java, and Queue.java from the basement, to later incorporate into our classes. Updated Book.java by adding all the accessor methods, which makes it much easier for classes to call these. Also added two private instance variables, available and waitList, and wrote a main method to test it.
+	Raheema:
+	Uploaded BinSearch.java from the basement, added toString method to Book.java, added add method to Library.java, made Books.txt easier to parse.
+	Fia:
+	deleted unnecessary class (User.java), found class from interwebz that encrypts passwords (later learned that that's not super important for now.)
+	
+6/02:
+	Maria: It's a hard knock life.
+	Raheema: Cleaned up a lot of the files, added temp folder (v 3.5) did more stuff with binary and toString(), added an issue! (resolved)
+	Fia: fixed literally one line of Book.java, added an issue!, added the encryption stuff to Driver.java (untested)
+	
+6/03:
+
+	
