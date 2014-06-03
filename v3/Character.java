@@ -1,4 +1,4 @@
-public class Character{
+public class User{
     private String firstName, lastName, username, gender, password;
     
     public Character(){
