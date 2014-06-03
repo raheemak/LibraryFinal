@@ -24,8 +24,7 @@ public class Driver{
 
        
 	else if (s.equals("y")){
-	    //System.out.println("heya");
-	    Character user= new Character();
+	    User user= new User();
 	    System.out.print("Please enter your first name: ");
 	    String first = scan.nextLine();
 	    if(first.isEmpty()){
@@ -80,7 +79,17 @@ public class Driver{
 	    
 	    System.out.print("Enter a password: ");
 	    String password=scan.nextLine();
-            try
+	    if(password.isEmpty()){
+		while(password.isEmpty()){
+		    System.out.println("Enter a valid password");
+		    password = scan.nextLine();
+		}
+	    }
+	    user.setPassword(password);
+	    
+
+	    /*            
+			  try
             {
                System.out.println("MD5 string: " + DemoMD5.MD5(password));
             }
@@ -94,14 +103,13 @@ public class Driver{
             {
               a.printStackTrace();
             }
-	    if(password.isEmpty()){
-		while(password.isEmpty()){
-		    System.out.println("Enter a valid password");
-		    password = scan.nextLine();
-		}
-	    }//some of the encryption code from http://www.codeobsessed.com/code/viewtopic.php?f=6&t=25
-	    
-	    /*todo: re-enter password
+
+	    //some of the encryption code from http://www.codeobsessed.com/code/viewtopic.php?f=6&t=25
+
+
+
+	    ////////////////////////////////////////////
+	    todo: re-enter password
 	    String password2= scan.nextLine();
 	    System.out.println("Re-enter password:" );
 	    if(password.isEmpty()){
@@ -112,9 +120,8 @@ public class Driver{
 	    }	    
 	    */
 
-	    user.setName(first, last);
-	    user.setGender(gender);
-	    user.setPassword(password);
+	    //add user to file
+	    user.add();
 
 	}
     }
