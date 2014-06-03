@@ -8,14 +8,14 @@ public class User{
 	password= "123";
     }
 
-    /*
-      public Character (String firstName, String lastName, String username, 
-      String gender, String password){
+    
+      public User (String username, String password, String name, 
+      String gender, String occupation){
       setName (firstName,lastName);
       setGender(gender);
       setuserName( username);
       setPassword (password);
-      }*/
+      }
 
 
     //setters & getters 
@@ -57,5 +57,4 @@ public class User{
     public String toString(){
 	return (username+",, "+password+",, "+name+",, "+gender);
     }
-
 }
