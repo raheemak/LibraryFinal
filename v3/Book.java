@@ -1,4 +1,4 @@
-public class Book {
+public class Book implements Comparable<Book> {
 
     private String title;
     private String author;
@@ -45,6 +45,10 @@ public class Book {
 	return (getTitle() + ",, "+ getAuthor() + ",, " + getStatus() + ",, " +"<>");
     }
 
+    public int compareTo(Book v){
+	return this.getTitle().compareTo(v.getTitle());
+    }
+	
     public static void main(String[] args){
 	Book Ron = new Book("Looking for Alaska", "John Green");
 	System.out.println(Ron.getAuthor()); // returns John Green

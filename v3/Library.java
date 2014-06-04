@@ -28,6 +28,7 @@ public class Library {
 	catch (FileNotFoundException e ){
 	    System.out.println("boo");
 	}
+	qsort(books);
     }
 
 
@@ -43,6 +44,7 @@ public class Library {
     - place in order*/
     public void addBook(String title, String author){
     	books.add(new Book(title, author));
+	qsort(books);
 	String newList="";
 	for (int x=0; x<books.size(); x++)
 	    newList+=(books.get(x)+"\n");
@@ -61,10 +63,57 @@ public class Library {
 	return books.size();
     }
 
+    /*****************************************************
+     * void qsort(int[])
+     * @param d -- array of ints to be sorted in place
+     *****************************************************/
+    public static void qsort( ArrayList<Book> d ) {
+	System.out.println("sorting");
+	qsHelp( 0, d.size()-1, d );
+    }
+    public static void qsHelp( int lo, int hi, ArrayList<Book> d ) {
+
+	if ( lo >= hi )
+	    return;
+
+	int tmpLo = lo;
+	int tmpHi = hi;
+	Book pivot = d.get(lo);
+
+	while( tmpLo < tmpHi ) {
+	    //first, slide markers in as far as possible without swaps
+	    while( d.get(tmpLo).compareTo(pivot) < 0) {
+		System.out.println("2");
+		tmpLo++;
+	    }
+	    while( d.get(tmpHi).compareTo(pivot) > 0) {
+		System.out.println("3");
+		tmpHi--;
+	    }
+
+	    swap( tmpLo, tmpHi, d );
+	}
+
+	//pivot has been floating around... plant it where it belongs
+	d.set(tmpLo, pivot);
+
+	//recurse on lower and upper ranges
+	qsHelp( lo, tmpLo-1, d );
+	qsHelp( tmpLo+1, hi, d );
+
+    }//end qsHelp
+
+    public static void swap( int x, int y, ArrayList<Book> o ) {
+	Book tmp = o.get(x);
+	o.set(x,o.get(y));
+	o.set(y, tmp);
+    }
+
+
     public static void main (String[]args){
 	Library test = new Library();
 	test.makeArray();
-	test.addBook("The Fault In Our Stars", "John Green");
+	test.addBook("An Abundance of Katherines", "John Green");
 	System.out.println(test);
     }
     
