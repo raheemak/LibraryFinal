@@ -1,25 +1,30 @@
 public class User{
-    private String firstName, lastName, username, gender, password;
+    private String name, username, gender, password,occupation;
     
-    public Character(){
-	firstName= "captain";
-	lastName= "underpants";
+    public User(){
+	name= "captain underpants";
 	username = "captain28";
 	gender= "male";
 	password= "123";
     }
 
-    /*
-    public Character (String firstName, String lastName, String username, 
-		      String gender, String password){
-	setName (firstName,lastName);
+    
+    public User (String username, String password, String name, 
+		 String gender, String occupation){
+	setName (name);
 	setGender(gender);
-	setuserName( username);
+	setUsername( username);
 	setPassword (password);
-	}*/
+	setOccupation (occupation);
+    }
 
 
     //setters & getters 
+
+
+    public void setOccupation (String oc){
+	occupation= oc;
+    }
 
     public void  setPassword(String pw){
 	password= pw;
@@ -28,22 +33,22 @@ public class User{
     public boolean setUsername(String un){
 	/*check whether username is available 
 	  if (taken)
-	    return false;
+	  return false;
 	*/
        	username= un;
 	return true;
     }
 
+    public void setName (String newName ){
+	name= newName;
+}	
+
     public void setGender (String g){
 	gender =g ;
     }
-    public void setName (String fn, String ln ){
-	firstName= fn;
-	lastName= ln;
-    }
 
     public String getName(){
-	return firstName+ " "+lastName;
+	return name;
     }
 
     public String getUsername(){
@@ -53,5 +58,9 @@ public class User{
     public String getPassword(){
 	return password;
     }
+    
 
+    public String toString(){
+	return (username+",, "+password+",, "+name+",, "+gender);
+    }
 }
