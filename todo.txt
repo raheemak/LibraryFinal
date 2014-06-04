@@ -4,7 +4,6 @@ check if username already taken using text file like Characters.txt (eventually 
 //encrypt password
 get login working 
 add methods for what books character has checked out, and //what books character is waiting on
-//when prgrm starts, write all the stuff from txt files into ArrayLists to make it easier to search for (also helps to implement different types of sorts)
 Later: due dates for books?
 
 Driver:
@@ -15,9 +14,6 @@ ability to return (type return and enter)
 Later: program wide thingy where library knows which user has which books, even if user isn't currently using prgrm.
 
 Book:
-//when called, create a new ArrayList to represent the waiting list (queue)
-//bool var: available -- this means that books will never be erased from the directory; available will just be set to false.
-//*QUEUE* after we get ArrayList working
 
 QuickSort, Binary Search, (Trees)
 
@@ -31,11 +27,6 @@ Book:
 Library:
 - add method (uses binary search) to add file into arraylist
 - also rewrites file 
-
-//this weekend :
-//fia- encrypting password
-//maria- waitlist 
-//raheema- binary search, add new book 
 
 MAKE ISSUES!!!!
 
