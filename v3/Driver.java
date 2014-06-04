@@ -25,6 +25,7 @@ public class Driver{
        
 	else if (s.equals("y")){
 	    User user= new User();
+	    Users allUsers= new Users();
 	    System.out.print("Please enter your first name: ");
 	    String first = scan.nextLine();
 	    if(first.isEmpty()){
@@ -43,6 +44,7 @@ public class Driver{
 		      last = scan.nextLine();
 		}
 	    }
+	    user.setName(first+" "+last);
 	    
 		    
 	    System.out.print("Please enter your gender: female or male: ");
@@ -53,6 +55,7 @@ public class Driver{
 		      gender = scan.nextLine().toLowerCase();
 		}
 	    }
+	    user.setGender(gender);
 
 		    
 	    System.out.print("Please enter your occupation: professor, student, etc.: ");
@@ -63,6 +66,7 @@ public class Driver{
 		      occupation = scan.nextLine();
 		}
 	    }
+	    user.setOccupation(occupation);
 	   
 	    System.out.print("Please enter a username: ");
 	    String username= scan.nextLine();
@@ -76,6 +80,7 @@ public class Driver{
 		    username = scan.nextLine();
 		}   
 	    }
+	    user.setUsername(username);
 	    
 	    System.out.print("Enter a password: ");
 	    String password=scan.nextLine();
@@ -121,8 +126,11 @@ public class Driver{
 	    */
 
 	    //add user to file
-	    user.add();
+	    allUsers.addUser(user);
+	    System.out.println(allUsers);
+	    System.out.println("Congratulationzas sdnljkd z!!! Yoouuur account has been created. ");
 
 	}
     }
 }
+
