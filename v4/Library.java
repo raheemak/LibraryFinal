@@ -109,6 +109,23 @@ public class Library {
 	o.set(y, tmp);
     }
 
+    /////copied from the basement
+     public static int binSearchIter( int[] a, int target, int lo, int hi ) {
+	int tPos = -1; 
+	int m = (lo + hi) / 2; 
+
+	while( lo <= hi ) {
+	    m = (lo + hi) / 2;
+	    if ( a[m] == target ) 
+		return m;
+	    else if ( a[m] > target )
+		hi = m - 1; 
+	    else if ( a[m] < target )
+		lo = m + 1; 
+	}
+	return tPos;
+    }
+    
 
     public static void main (String[]args){
 	Library test = new Library();
@@ -117,5 +134,6 @@ public class Library {
 	System.out.println(test);
     }
     
+   
     
 }
