@@ -1,5 +1,8 @@
+import java.util.*;
+
 public class User{
     private String name, username, gender, password,occupation;
+    private ArrayList<Book> checkedOut= new ArrayList<Book>(); 
     
     public User(){
 	name= "captain underpants";
@@ -58,9 +61,21 @@ public class User{
     public String getPassword(){
 	return password;
     }
-    
+
+    public String printBooks(){
+	String all = "<";
+	for (int x=0 ; x<checkedOut.size(); x++){
+	    all+=checkedOut.get(x).getTitle();
+	    all+= ",, ";
+	    all+= checkedOut.get(x).getAuthor();
+	    if (x!= (checkedOut.size()-1))all+="; ";
+	}
+    	all+=">";
+	return all;
+    }
 
     public String toString(){
-	return (username+",, "+password+",, "+name+",, "+gender);
+	return (username+",, "+password+",, "+name+",, "+
+		gender + ",, "+occupation+",, "+ printBooks());
     }
 }

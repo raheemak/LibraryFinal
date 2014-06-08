@@ -21,6 +21,7 @@ public class Users {
 		if (line.equals(null)){
 		}
 		String[]split = line.split(",, ");
+		///////////////////////////////////////////add books too
 		users.add(new User(split[0], split[1], split[2],split[3], split[4]));
 
 	    }
@@ -59,11 +60,5 @@ public class Users {
     public int size(){
 	return users.size();
     }
-
-    public static void main (String[]args){
-	Users test = new Users();
-	System.out.println(test);
-    }
-    
     
 }

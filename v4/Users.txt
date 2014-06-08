@@ -1,2 +1,3 @@
-username,, password,, name,, gender
-funnyfia,, iaintlaughindoe,, fia hargil,, female
+username,, password,, firstName lastName,, gender,, occupation,, <>
+funnyfia,, iaintlaughindoe,, fia hargil,, female,, student,, <>
+raheemzk,, raheema1,, raheema kadwa,, female,, student,, <>
