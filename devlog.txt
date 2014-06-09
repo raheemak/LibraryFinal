@@ -39,5 +39,11 @@ devlog created
 	Fia: fixed literally one line of Book.java, added an issue!, added the encryption stuff to Driver.java (untested)
 	
 6/03:
+	lol
+
+Weekend 6/6- 6/8
+	Raheema: From the file, books checked out can be read in
+	now. Updated Driver so there is an option for a recurring
+	user. 
 
 	

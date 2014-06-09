@@ -24,15 +24,15 @@ public class User{
     }
     
     ///example: "<Book One,, Author One; Book Two,, Author Two>";
-    public void setBooks(String strBooks){
+    public static void  setBooks(String strBooks){
 	//if there are books
 	if (strBooks.length()>2){
 	    //split into array of books
-	    String[]books= (strBooks.substring(0, strBooks.length()-1)).split("; ");
+	    String[]books= (strBooks.substring(1, strBooks.length()-1)).split("; ");
 	    for (int x=0; x<books.length; x++){
 		//make array [title, author]
 		String[]currBook= books[x].split(",, ");
-		//find book from library and then add to array 
+		//find book from library (by title and author)  and then add to array 
 		//checkedOut.add(library.findBook(currBook[0], currBook[1]));
 	    }
 	}
@@ -97,4 +97,7 @@ public class User{
 	return (username+",, "+password+",, "+name+",, "+
 		gender + ",, "+occupation+",, "+ printBooks());
     }
+
+
+ 
 }
