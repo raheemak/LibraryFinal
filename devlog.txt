@@ -44,6 +44,6 @@ devlog created
 Weekend 6/6- 6/8
 	Raheema: From the file, books checked out can be read in
 	now. Updated Driver so there is an option for a recurring
-	user. 
+	user. Worked on binary search , still is not finished. 
 
 	
