@@ -1,9 +1,10 @@
 import java.util.*;
+import java.io.*;
 
 public class User{
     private String name, username, gender, password,occupation;
     private ArrayList<Book> checkedOut= new ArrayList<Book>(); 
-    
+    private Library library= new Library ();
     public User(){
 	name= "captain underpants";
 	username = "captain28";
@@ -13,17 +14,35 @@ public class User{
 
     
     public User (String username, String password, String name, 
-		 String gender, String occupation){
+		 String gender, String occupation, String books){
 	setName (name);
 	setGender(gender);
 	setUsername( username);
 	setPassword (password);
 	setOccupation (occupation);
+	setBooks( books);
     }
-
-
+    
+    ///example: "<Book One,, Author One; Book Two,, Author Two>";
+    public void setBooks(String strBooks){
+	//if there are books
+	if (strBooks.length()>2){
+	    //split into array of books
+	    String[]books= (strBooks.substring(0, strBooks.length()-1)).split("; ");
+	    for (int x=0; x<books.length; x++){
+		//make array [title, author]
+		String[]currBook= books[x].split(",, ");
+		//find book from library and then add to array 
+		//checkedOut.add(library.findBook(currBook[0], currBook[1]));
+	    }
+	}
+    }
+    
+    
     //setters & getters 
-
+    public ArrayList<Book> getBooks(){
+	return checkedOut;
+    }
 
     public void setOccupation (String oc){
 	occupation= oc;

@@ -22,7 +22,7 @@ public class Users {
 		}
 		String[]split = line.split(",, ");
 		///////////////////////////////////////////add books too
-		users.add(new User(split[0], split[1], split[2],split[3], split[4]));
+		users.add(new User(split[0], split[1], split[2],split[3], split[4], split[5]));
 
 	    }
 	}
