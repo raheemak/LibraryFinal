@@ -5,13 +5,16 @@ public class Library {
     
 
     private ArrayList<Book>  books= new ArrayList<Book>(); 
-    private int size ;    
+    private int size ;  
+  
     public Library (){
 	books= new ArrayList();
+	makeArray();
     }
 
     //reading csv file 
     public  void  makeArray(){
+	int x=0;
 	//236 books, 2 fields each 
 	try {
 	    File file = new File("Books.txt");
@@ -22,15 +25,15 @@ public class Library {
 		}
 		String[]split = line.split(",, ");
 		books.add(new Book(split[0], split[1]));
-		    }
+	    }
 	}
 	
 	catch (FileNotFoundException e ){
 	    System.out.println("boo");
 	}
-	qsort(books);
+	//qsort(books);
     }
-
+    
 
     public String toString(){ 
 	String z="";
@@ -127,22 +130,24 @@ public class Library {
 
 	while( lo <= hi ) {
 	    m = (lo + hi) / 2;
-	    if ( books.get(m).getTitle() == title ) 
+	    if ( books.get(m).getTitle().compareTo(title)==0 ) 
 		return m ;
 	    else if ( books.get(m).getTitle().compareTo(title) >0)
 		hi = m - 1; 
 	    else if ( books.get(m).getTitle().compareTo(title)<0)
 		lo = m + 1; 
+	    
 	}
 	return tPos;
     }
     
-
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
     public static void main (String[]args){
 	Library test = new Library();
 	test.makeArray();
 	//test.addBook("An Abundance of Katherines", "John Green");
-	System.out.println(test);
+	//System.out.println(test);
     }
     
    

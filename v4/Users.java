@@ -60,4 +60,28 @@ public class Users {
 	return users.size();
     }
     
+
+   
+    /////copied from the basement: (BinSearchIterative function)
+    /////used to log in ! 
+    public  int findUser( String username){
+	int tPos = -1, lo=0, hi= users.size();
+	
+	int m = (lo + hi) / 2; 
+
+	while( lo <= hi ) {
+	    m = (lo + hi) / 2;
+	    if ( users.get(m).getUsername().compareTo(username)==0 ) 
+		return m ;
+	    else if ( users.get(m).getUsername().compareTo(username) >0)
+		hi = m - 1; 
+	    else if ( users.get(m).getUsername().compareTo(username)<0)
+		lo = m + 1; 
+	    
+	}
+	return tPos;
+    }
+    
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
 }

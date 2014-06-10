@@ -26,9 +26,12 @@ public class Driver{
 
 	if (s.equals ("y")){
 	    System.out.println("ay logged in");
+	    loggedIn= true;
+	    ///TODO : read in information for user!
 	}
+	//////////////////////////////////////////////////////////////////////////////////////////
 	else {
-	    //////////////////////////////////////////////////////////////////////////////////////////
+	    
 	    
 	    System.out.println("Hello and welcome to the-fab-tria Library! We are a new and up in coming library that has been opened for the community. Feel free to become a member to check out books, sign up on wait lists for books you care to read that are not available, and even send us requests for books we can add to our library. All in all we hope you have a great experience and read on!");
 	    System.out.print("Would you like to sign up to become a member? Please type 'y' for yes or 'n' for no: ");
@@ -92,11 +95,12 @@ public class Driver{
 		
 		System.out.print("Please enter a username: ");
 		String username= scan.nextLine();
-		while (username.isEmpty() ||  currentUser.setUsername(username)==false){
+		while (username.isEmpty() ||  allUsers.findUser(username)==-1){
 		    if(username.isEmpty()){
 			System.out.println("Enter a valid username");
 			username = scan.nextLine();
 		    }
+		    ////////////////////this check does not work !
 		    else{
 			System.out.println("This username is already taken.");
 			username = scan.nextLine();
@@ -153,6 +157,12 @@ public class Driver{
 		System.out.println("Congratulations! Your account has been created. ");
 		
 	    }
+	}
+    
+
+	if (loggedIn){
+
+	    //this is where the actual library things happen !
 	}
     }
 }

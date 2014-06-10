@@ -11,6 +11,7 @@ public class User{
 	username = "captain28";
 	gender= "male";
 	password= "123";
+	occupation ="superhero";
     }
 
     
@@ -53,13 +54,8 @@ public class User{
 	password= pw;
     }
 
-    public boolean setUsername(String un){
-	/*check whether username is available 
-	  if (taken)
-	  return false;
-	*/
-       	username= un;
-	return true;
+    public void  setUsername(String un){
+	username= un;
     }
 
     public void setName (String newName ){
@@ -98,7 +94,10 @@ public class User{
 	return (username+",, "+password+",, "+name+",, "+
 		gender + ",, "+occupation+",, "+ printBooks());
     }
-
    
+
+    public static void main (String[]args){
+	
+    }
  
 }
