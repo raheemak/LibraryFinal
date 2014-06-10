@@ -45,5 +45,9 @@ Weekend 6/6- 6/8
 	Raheema: From the file, books checked out can be read in
 	now. Updated Driver so there is an option for a recurring
 	user. Worked on binary search , still is not finished. 
+	
+6/10
+	todos collaborated. binary search to find a book is done and checked. when creating a new account/logging in : 
+	function to find username (binary) is writter, not working. 
 
 	
