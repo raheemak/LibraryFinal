@@ -63,6 +63,12 @@ public class Library {
 	return books.size();
     }
 
+    public Book get(int x){
+	return books.get(x);
+    }
+    
+    //////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
     /*****************************************************
      * void qsort(int[])
      * @param d -- array of ints to be sorted in place
@@ -109,34 +115,33 @@ public class Library {
 	o.set(y, tmp);
     }
 
-
-    /////////////////////////GET WORKING!
-    /*
-    /////copied from the basement
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+    
+    /////copied from the basement: (BinSearchIterative function)
     /////currently is used only to  make reading user checkedOut list easier
-    public static int binSearchIter( String title, String author, int lo, int hi ) {
-	int tPos = -1; 
+    public  int findBook( String title, String author){
+	int tPos = -1, lo=0, hi= books.size();
+	
 	int m = (lo + hi) / 2; 
 
 	while( lo <= hi ) {
 	    m = (lo + hi) / 2;
-	    if ( books.get(m).getTitle() == target ) {
-		//continue till correct author found
-	    }
-		
-	    else if ( books.get(m).getTitle() > target )
+	    if ( books.get(m).getTitle() == title ) 
+		return m ;
+	    else if ( books.get(m).getTitle().compareTo(title) >0)
 		hi = m - 1; 
-	    else if ( books.get(m).getTitle < target )
+	    else if ( books.get(m).getTitle().compareTo(title)<0)
 		lo = m + 1; 
 	}
 	return tPos;
     }
-    */
+    
 
     public static void main (String[]args){
 	Library test = new Library();
 	test.makeArray();
-	test.addBook("An Abundance of Katherines", "John Green");
+	//test.addBook("An Abundance of Katherines", "John Green");
 	System.out.println(test);
     }
     

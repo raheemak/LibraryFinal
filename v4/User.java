@@ -5,6 +5,7 @@ public class User{
     private String name, username, gender, password,occupation;
     private ArrayList<Book> checkedOut= new ArrayList<Book>(); 
     private Library library= new Library ();
+    
     public User(){
 	name= "captain underpants";
 	username = "captain28";
@@ -24,7 +25,7 @@ public class User{
     }
     
     ///example: "<Book One,, Author One; Book Two,, Author Two>";
-    public static void  setBooks(String strBooks){
+    public  void  setBooks(String strBooks){
 	//if there are books
 	if (strBooks.length()>2){
 	    //split into array of books
@@ -33,7 +34,7 @@ public class User{
 		//make array [title, author]
 		String[]currBook= books[x].split(",, ");
 		//find book from library (by title and author)  and then add to array 
-		//checkedOut.add(library.findBook(currBook[0], currBook[1]));
+		checkedOut.add(library.get(library.findBook(currBook[0], currBook[1])));
 	    }
 	}
     }
@@ -98,6 +99,6 @@ public class User{
 		gender + ",, "+occupation+",, "+ printBooks());
     }
 
-
+   
  
 }

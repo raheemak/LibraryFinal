@@ -20,7 +20,7 @@ public class Users {
 		String line= doc.nextLine();
 		if (line.equals(null)){
 		}
-		String[]split = line.split(",, ");0
+		String[]split = line.split(",, ");
 		users.add(new User(split[0], split[1], split[2],split[3], split[4], split[5]));
 
 	    }
