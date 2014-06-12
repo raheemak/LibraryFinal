@@ -16,21 +16,27 @@ public class Driver{
 
 	System.out.println("Welcome to the-fab-tria Library! Are you a returning user?");
 	System.out.print("Type 'y' for yes or 'n' for no: ");
-	String s = scan.nextLine();
+	while (true){
 	
-	while  (!s.equals("y")&&!s.equals("n")){
-	    System.out.print("y or n ?");
-	    s= scan.nextLine();
-	}
-
-
-	if (s.equals ("y")){
-	    System.out.println("ay logged in");
-	    loggedIn= true;
-	    ///TODO : read in information for user!
+		while  (!s.equals("y")&&!s.equals("n")){
+		    System.out.print("y or n ?");
+		    s= scan.nextLine();
+		}
+	
+	
+		if (s.equals ("y")){
+		    //System.out.println("ay logged in");
+		    if (allUsers.findUser(username)==-1){
+		    	System.out.println("This username does not exist. \nPlease try again.");
+		    }
+		    else
+		    	break;
+		}
+		if(s.equals("n"))
+			break;
 	}
 	//////////////////////////////////////////////////////////////////////////////////////////
-	else {
+	else if (loggedIn==false){
 	    
 	    
 	    System.out.println("Hello and welcome to the-fab-tria Library! We are a new and up in coming library that has been opened for the community. Feel free to become a member to check out books, sign up on wait lists for books you care to read that are not available, and even send us requests for books we can add to our library. All in all we hope you have a great experience and read on!");
