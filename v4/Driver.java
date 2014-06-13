@@ -12,38 +12,53 @@ public class Driver{
 	Users allUsers= new Users();
 	User currentUser= new User();
 	boolean loggedIn= false;
+	int userNumber = 0;
 	///////////////////////////////////////////////////
-
+	
 	System.out.println("Welcome to the-fab-tria Library! Are you a returning user?");
 	System.out.print("Type 'y' for yes or 'n' for no: ");
+	String s  = scan.nextLine();
+	
 	while (true){
 	
-		while  (!s.equals("y")&&!s.equals("n")){
-		    System.out.print("y or n ?");
-		    s= scan.nextLine();
-		}
+	    while  (!s.equals("y")&&!s.equals("n")){
+		System.out.print("y or n ?");
+		s= scan.nextLine();
+	    }
 	
 	
-		if (s.equals ("y")){
-		    //System.out.println("ay logged in");
-		    if (allUsers.findUser(username)==-1){
-		    	System.out.println("This username does not exist. \nPlease try again.");
-		    }
-		    else
-		    	break;
+	    if (s.equals ("y")){
+		//System.out.println("ay logged in");
+		System.out.print("Username: ");
+		s=scan.nextLine();
+
+		while(s==null){
+		    System.out.println("Username: " );
+		    s=scan.nextLine();
 		}
-		if(s.equals("n"))
-			break;
+		userNumber= allUsers.findUser(s);
+		if (userNumber==-1){
+		    System.out.println("This username does not exist. \nPlease try again. \n Type 'new' if you do not have an account.");
+		}
+		else{
+		    //ask password 
+		    //make user 
+		    loggedIn=true;
+		    break;
+		}
+	    }
+	    if(s.equals("n"))
+		break;
 	}
 	//////////////////////////////////////////////////////////////////////////////////////////
-	else if (loggedIn==false){
+	if (loggedIn==false){
 	    
 	    
 	    System.out.println("Hello and welcome to the-fab-tria Library! We are a new and up in coming library that has been opened for the community. Feel free to become a member to check out books, sign up on wait lists for books you care to read that are not available, and even send us requests for books we can add to our library. All in all we hope you have a great experience and read on!");
 	    System.out.print("Would you like to sign up to become a member? Please type 'y' for yes or 'n' for no: ");
 	    
 	    
-	    	s= scan.nextLine();
+	    s= scan.nextLine();
 	    while  (!s.equals("y")&&!s.equals("n")){
 		System.out.print("y or n ?");
 		s= scan.nextLine();
@@ -74,7 +89,7 @@ public class Driver{
 			System.out.println("Please enter a valid last name: ");
 			last = scan.nextLine();
 		    }
-	    }
+		}
 		currentUser.setName(first+" "+last);
 		
 		
@@ -93,83 +108,82 @@ public class Driver{
 		String occupation = scan.nextLine();
 		if(occupation.isEmpty()){
 		    while(occupation.isEmpty()){
-		      System.out.println("Please enter your occupation: ");
-		      occupation = scan.nextLine();
+			System.out.println("Please enter your occupation: ");
+			occupation = scan.nextLine();
 		    }
 		}
 		currentUser.setOccupation(occupation);
 		
-		System.out.print("Please enter a username: ");
-		String username= scan.nextLine();
-		while (username.isEmpty() ||  allUsers.findUser(username)==-1){
-		    if(username.isEmpty()){
-			System.out.println("Enter a valid username");
-			username = scan.nextLine();
+		    System.out.print("Please enter a username: ");
+		    String username= scan.nextLine();
+		    System.out.println("username: "+username);
+	      
+		    while (username.isEmpty() ||  allUsers.findUser(username)>-1){
+			if(username.isEmpty()){
+			    System.out.println("Enter a valid username");
+			    username = scan.nextLine();
+			}
+
+			else{
+			    System.out.println("This username is already taken. /n Please enter a username: ");
+			    username = scan.nextLine();
+			}   
 		    }
-		    ////////////////////this check does not work !
-		    else{
-			System.out.println("This username is already taken.");
-			username = scan.nextLine();
-		    }   
-		}
-		currentUser.setUsername(username);
+		    currentUser.setUsername(username);
 		
-		System.out.print("Enter a password: ");
-		String password=scan.nextLine();
-		if(password.isEmpty()){
-		    while(password.isEmpty()){
-			System.out.println("Enter a valid password");
-		    password = scan.nextLine();
+		    System.out.print("Enter a password: ");
+		    String password=scan.nextLine();
+		    if(password.isEmpty()){
+			while(password.isEmpty()){
+			    System.out.println("Enter a valid password");
+			    password = scan.nextLine();
+			}
 		    }
-		}
-		currentUser.setPassword(password);
+		    currentUser.setPassword(password);
 		
-		
-		/*            
-			      try
-			      {
-			      System.out.println("MD5 string: " + DemoMD5.MD5(password));
-			      }
+		    /*            
+				  try
+				  {
+				  System.out.println("MD5 string: " + DemoMD5.MD5(password));
+				  }
 			      
-			      catch (NoSuchAlgorithmException a)
-			      {
-			      a.printStackTrace();
-			      }
+				  catch (NoSuchAlgorithmException a)
+				  {
+				  a.printStackTrace();
+				  }
 			      
-			      catch (UnsupportedEncodingException a)
-			      {
-			      a.printStackTrace();
-			      }
+				  catch (UnsupportedEncodingException a)
+				  {
+				  a.printStackTrace();
+				  }
 			      
-			      //some of the encryption code from http://www.codeobsessed.com/code/viewtopic.php?f=6&t=25
+				  //some of the encryption code from http://www.codeobsessed.com/code/viewtopic.php?f=6&t=25
 
 			      
 			      
-			      ////////////////////////////////////////////
-			      todo: re-enter password
-			      String password2= scan.nextLine();
-			      System.out.println("Re-enter password:" );
-			      if(password.isEmpty()){
-			      while(password.isEmpty()){
-			      System.out.println("Enter a valid password");
-			      password = scan.nextLine();
-			      }
-			      }	    
-		*/
+				  ////////////////////////////////////////////
+				  todo: re-enter password
+				  String password2= scan.nextLine();
+				  System.out.println("Re-enter password:" );
+				  if(password.isEmpty()){
+				  while(password.isEmpty()){
+				  System.out.println("Enter a valid password");
+				  password = scan.nextLine();
+				  }
+				  }	    
 		
-		//add user to file
-		allUsers.addUser(currentUser);
-		loggedIn=true;
-		System.out.println("Congratulations! Your account has been created. ");
-		
+		    */
+		    //add user to file
+		    allUsers.addUser(currentUser);
+		    loggedIn=true;
+		    System.out.println("Congratulations! Your account has been created. ");
+	
 	    }
 	}
-    
-
 	if (loggedIn){
-
+	    
 	    //this is where the actual library things happen !
 	}
+	
     }
 }
-    
