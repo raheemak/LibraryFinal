@@ -54,7 +54,7 @@ public class Driver{
 		if (s.equals(allUsers.getUser(userNumber).getPassword())){
 		    currentUser= allUsers.getUser(userNumber);
 		    loggedIn= true;
-		    System.out.println("ay you are logged in !");
+		    System.out.println(" you are logged in !");
 		}
 	    }
 	}
