@@ -141,7 +141,26 @@ public class Library {
 	return found;
     }
 	    
+    /////copied from the basement: (BinSearchIterative function)
+    /////only used when reading user information
+    public  int findBook( String title, String author){
+	int tPos = -1, lo=0, hi= books.size();
+	
+	int m = (lo + hi) / 2; 
 
+	while( lo <= hi ) {
+	    m = (lo + hi) / 2;
+	    if ( books.get(m).getTitle().compareTo(title)==0 ) 
+		return m ;
+	    else if ( books.get(m).getTitle().compareTo(title) >0)
+		hi = m - 1; 
+	    else if ( books.get(m).getTitle().compareTo(title)<0)
+		lo = m + 1; 
+	    
+	}
+	return tPos;
+    }
+    
     public static void main (String[]args){
 	Library test = new Library();
 	test.makeArray();

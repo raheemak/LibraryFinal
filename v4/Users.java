@@ -12,7 +12,7 @@ public class Users {
     }
 
     //FILE IN FORMAT: 
-    //username,, password,, firstName lastName,, gender,, occupation,, <>
+    //username,, password,, firstName lastName,, gender,, occupation,, firstTitle,, firstAuthor; secondTitle,, secondAuthor>
 
     //reading csv file
     public void makeArray(){
@@ -29,8 +29,6 @@ public class Users {
 	    }
 	    
 	}
-	
-	
 	catch (FileNotFoundException e ){
 	    System.out.println("boo");
 	}

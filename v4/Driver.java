@@ -13,7 +13,7 @@ public class Driver{
 	User currentUser= new User();
 	boolean loggedIn= false;
 	int userNumber = 0;
-	boolean newUser=false;
+	boolean newUser=true;
 	///////////////////////////////////////////////////
 	
 	System.out.println("Welcome to the-fab-tria Library! Are you a returning user?");
@@ -42,11 +42,11 @@ public class Driver{
 		s=scan.nextLine();
 		userNumber= allUsers.findUser(s);
 		if (s.equals("new")){
-		    newUser= true;
 		    break;
 		}
 		
 	    }
+	    newUser=false;
 	    if (!newUser){
 		System.out.print("password: ");
 		s= scan.nextLine();
@@ -68,7 +68,7 @@ public class Driver{
 	if (newUser){
 	    
 	    
-	    System.out.println("Hello and welcome to the-fab-tria Library! We are a new and up in coming library that has been opened for the community. Feel free to become a member to check out books, sign up on wait lists for books you care to read that are not available, and even send us requests for books we can add to our library. All in all we hope you have a great experience and read on!");
+	    System.out.println("*********\nHello and welcome to the-fab-tria Library! We are a new and up in coming library that has been opened for the community. Feel free to become a member to check out books, sign up on wait lists for books you care to read that are not available, and even send us requests for books we can add to our library. All in all we hope you have a great experience and read on!\n***********\n");
 	    System.out.print("Would you like to sign up to become a member? Please type 'y' for yes or 'n' for no: ");
 	    
 	    
