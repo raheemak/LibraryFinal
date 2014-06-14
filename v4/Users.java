@@ -77,14 +77,17 @@ public class Users {
 	int m = (lo + hi) / 2; 
 
 	while( lo <= hi ) {
+
 	    m = (lo + hi) / 2;
-	    if ( users.get(m).getUsername().compareTo(username)==0 ) 
+	    if (m>= users.size())
+		return -1;
+	    else if ( users.get(m).getUsername().compareTo(username)==0 ) 
 		return m ;
 	    else if ( users.get(m).getUsername().compareTo(username) >0)
 		hi = m - 1; 
-	    else if ( users.get(m).getUsername().compareTo(username)<0)
+	    else 
+		//f ( users.get(m).getUsername().compareTo(username)<0)
 		lo = m + 1; 
-	    
 	}
 	return tPos;
     }
@@ -94,6 +97,10 @@ public class Users {
 
     public static void main (String[]args){
 	Users test = new Users();
-	System.out.println(test.findUser("raheemaaa"));
+	System.out.println(test.findUser("s"));
+	System.out.println(test.findUser("raheemzk"));
+	System.out.println(test.findUser("funnyfia"));
+	System.out.println(test.findUser("289hewkj"));
+	System.out.println(test.findUser("mariak"));
     }
 }
