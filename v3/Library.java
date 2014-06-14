@@ -112,8 +112,7 @@ public class Library {
 
     public static void main (String[]args){
 	Library test = new Library();
-	test.makeArray();
-	test.addBook("ABC", "George Orwell");
+	test.makeArray();	test.addBook("ABC", "George Orwell");
 	System.out.println(test);
     }
     
