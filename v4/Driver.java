@@ -13,6 +13,7 @@ public class Driver{
 	User currentUser= new User();
 	boolean loggedIn= false;
 	int userNumber = 0;
+	boolean newUser=false;
 	///////////////////////////////////////////////////
 	
 	System.out.println("Welcome to the-fab-tria Library! Are you a returning user?");
@@ -33,35 +34,38 @@ public class Driver{
 		System.out.println("Username: " );
 		s=scan.nextLine();
 	    }
-	    System.out.println(s);
 	    userNumber= allUsers.findUser(s);
 
-	    if (userNumber==-1)
-		System.out.println("This username does not exist. \nPlease try again. \n Type 'new' if you do not have an account.");
-	    else if (s.equals("new")){
+	    while (userNumber==-1){
+		
+		System.out.println("This username does not exist. \nPlease try again. \nType 'new' if you do not have an account.");
+		s=scan.nextLine();
+		userNumber= allUsers.findUser(s);
+		if (s.equals("new")){
+		    newUser= true;
+		    break;
+		}
+		
 	    }
-	    
-	    else{
+	    if (!newUser){
 		System.out.print("password: ");
 		s= scan.nextLine();
-
+		
 		while(!s.equals(allUsers.getUser(userNumber).getPassword())){
 		    System.out.println("incorrect password!");
 		    System.out.println("password: ");
 		    s= scan.nextLine();
 		}
-			
+		
 		if (s.equals(allUsers.getUser(userNumber).getPassword())){
 		    currentUser= allUsers.getUser(userNumber);
 		    loggedIn= true;
 		    System.out.println(" you are logged in !");
 		}
 	    }
-	}
-	
-	
+    	}
 	//////////////////////////////////////////////////////////////////////////////////////////
-	else if (s.equals("n")){
+	if (newUser){
 	    
 	    
 	    System.out.println("Hello and welcome to the-fab-tria Library! We are a new and up in coming library that has been opened for the community. Feel free to become a member to check out books, sign up on wait lists for books you care to read that are not available, and even send us requests for books we can add to our library. All in all we hope you have a great experience and read on!");
@@ -86,7 +90,7 @@ public class Driver{
 		String first = scan.nextLine();
 		if(first.isEmpty()){
 		    while(first.isEmpty()){
-			System.out.println("Please enter a valid first name: ");
+			System.out.print("Please enter a valid first name: ");
 			first = scan.nextLine();
 		    }
 		}
@@ -96,7 +100,7 @@ public class Driver{
 		
 		if(last.isEmpty()){
 		    while(last.isEmpty()){
-			System.out.println("Please enter a valid last name: ");
+			System.out.print("Please enter a valid last name: ");
 			last = scan.nextLine();
 		    }
 		}
@@ -135,7 +139,7 @@ public class Driver{
 			}
 
 			else{
-			    System.out.println("This username is already taken. /n Please enter a username: ");
+			    System.out.print("This username is already taken. \nPlease enter a username: ");
 			    username = scan.nextLine();
 			}   
 		    }
