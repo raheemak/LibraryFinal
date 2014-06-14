@@ -58,6 +58,15 @@ public class Book implements Comparable<Book> {
 	}
 	return -1;
     }
+
+    public boolean equals(Book obj){
+	if(this.getTitle().equals(obj.getTitle()) && this.getAuthor().equals(obj.getAuthor()))
+	   return true;
+	else
+	    return false;
+    }
+	    
+	   
 	
     public static void main(String[] args){
 	Book Ron = new Book("Looking for Alaska", "John Green");
