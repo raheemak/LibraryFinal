@@ -24,6 +24,10 @@ public class Book implements Comparable<Book> {
 	return available;
     }
 
+    public void setStatus(boolean hello){
+	available = hello;
+    }
+
     public void add(String name){
 	waitList.enqueue(name);
     }
@@ -46,7 +50,13 @@ public class Book implements Comparable<Book> {
     }
 
     public int compareTo(Book v){
-	return this.getTitle().compareTo(v.getTitle());
+	if (this.getTitle().compareTo(v.getTitle()) != 0)
+	    return this.getTitle().compareTo(v.getTitle());
+	else{
+	    if (this.getAuthor().compareTo(v.getAuthor()) != 0)
+		return this.getAuthor().compareTo(v.getAuthor());
+	}
+	return -1;
     }
 	
     public static void main(String[] args){

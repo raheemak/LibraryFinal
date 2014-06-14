@@ -5,16 +5,13 @@ public class Library {
     
 
     private ArrayList<Book>  books= new ArrayList<Book>(); 
-    private int size ;  
-  
+    private int size ;    
     public Library (){
 	books= new ArrayList();
-	makeArray();
     }
 
     //reading csv file 
     public  void  makeArray(){
-	int x=0;
 	//236 books, 2 fields each 
 	try {
 	    File file = new File("Books.txt");
@@ -25,7 +22,7 @@ public class Library {
 		}
 		String[]split = line.split(",, ");
 		books.add(new Book(split[0], split[1]));
-	    }
+		    }
 	}
 	
 	catch (FileNotFoundException e ){
@@ -33,7 +30,7 @@ public class Library {
 	}
 	//qsort(books);
     }
-    
+
 
     public String toString(){ 
 	String z="";
@@ -41,12 +38,20 @@ public class Library {
 	    z+=(books.get(x)+"\n");
 	return z;
     }
+
+    public void Checkout(String title, String author){
+	Book welcome = new Book(title, author);
+	if (searchBook(books, welcome, 0, size()) == false)
+	    addBook(welcome);
+    }
+	    
+	
  
     /*add book to library 
     - check if book already exists
     - place in order*/
-    public void addBook(String title, String author){
-    	books.add(new Book(title, author));
+    public void addBook(Book hello){
+	books.add(hello);
 	qsort(books);
 	String newList="";
 	for (int x=0; x<books.size(); x++)
@@ -66,12 +71,6 @@ public class Library {
 	return books.size();
     }
 
-    public Book get(int x){
-	return books.get(x);
-    }
-    
-    //////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////
     /*****************************************************
      * void qsort(int[])
      * @param d -- array of ints to be sorted in place
@@ -118,38 +117,39 @@ public class Library {
 	o.set(y, tmp);
     }
 
-    ///////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////
-    
-    /////copied from the basement: (BinSearchIterative function)
-    /////currently is used only to  make reading user checkedOut list easier
-    public  int findBook( String title, String author){
-	int tPos = -1, lo=0, hi= books.size();
+    public static boolean searchBook(ArrayList<Book> o, Book target, int lo, int hi){
+	boolean found = false;
+	int m = (lo + hi) / 2;
 	
-	int m = (lo + hi) / 2; 
-
-	while( lo <= hi ) {
-	    m = (lo + hi) / 2;
-	    if ( books.get(m).getTitle().compareTo(title)==0 ) 
-		return m ;
-	    else if ( books.get(m).getTitle().compareTo(title) >0)
-		hi = m - 1; 
-	    else if ( books.get(m).getTitle().compareTo(title)<0)
-		lo = m + 1; 
-	    
+	while(lo <= hi){
+	    if (o.get(m).equals(target)){
+		found = true;
+		if(o.get(m).getStatus() == true){
+		    o.get(m).setStatus(false);
+		    System.out.print("Thank you for checking out"+  target.getTitle() + ". We hope you enjoy it!");
+		}
+		else{
+		    System.out.println("We are sorry to inform you that the book that you requested has already been checked out. Would you like to be added to the waiList for the book?");
+		}
+	    }
+	    else if (o.get(m).compareTo(target) > 0)
+		hi = m - 1;
+	    else if (o.get(m).compareTo(target) < 0)
+		lo = m + 1;
 	}
-	return tPos;
+
+	return found;
     }
-    
-    ///////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////
+	    
+
     public static void main (String[]args){
 	Library test = new Library();
 	test.makeArray();
-	//test.addBook("An Abundance of Katherines", "John Green");
-	//System.out.println(test);
+	//Book heya = new Book("Paper Towns, John Green");
+	//test.addBook("Paper Towns", "John Green");
+	//System.out.println(test
+	System.out.println(test);
     }
     
-   
     
 }
