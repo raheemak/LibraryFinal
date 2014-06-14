@@ -7,7 +7,7 @@ public class Library {
     private ArrayList<Book>  books= new ArrayList<Book>(); 
     private int size ;    
     public Library (){
-	books= new ArrayList();
+	makeArray();
     }
 
     //reading csv file 
@@ -142,7 +142,9 @@ public class Library {
     }
 	    
     /////copied from the basement: (BinSearchIterative function)
-    /////only used when reading user information
+    ///used when reading user information
+    ///also used when returning a book
+    ///used when only position needed
     public  int findBook( String title, String author){
 	int tPos = -1, lo=0, hi= books.size();
 	
@@ -160,6 +162,11 @@ public class Library {
 	}
 	return tPos;
     }
+
+    public void returnBook(Book book){
+	int pos= findBook(book.getTitle(), book.getAuthor());
+	books.get(pos).setStatus(true);
+    }
     
     public static void main (String[]args){
 	Library test = new Library();
@@ -167,7 +174,7 @@ public class Library {
 	//Book heya = new Book("Paper Towns, John Green");
 	//test.addBook("Paper Towns", "John Green");
 	//System.out.println(test
-	System.out.println(test);
+	//System.out.println(test);
     }
     
     
