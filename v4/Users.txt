@@ -1,4 +1,3 @@
-username,, password,, firstName lastName,, gender,, occupation,, <>
 funnyfia,, iaintlaughindoe,, fia hargil,, female,, student,, <>
 mariakm,, 123,, maria kollaros,, female,, student,, <>
 raheemzk,, rcadillac,, raheema kadwa,, female,, student,, <>

@@ -11,27 +11,32 @@ public class Users {
 	makeArray();
     }
 
+    //FILE IN FORMAT: 
+    //username,, password,, firstName lastName,, gender,, occupation,, <>
+
     //reading csv file
     public void makeArray(){
 	try {
 	    File file = new File("Users.txt");
 	    Scanner doc= new Scanner (file);
 	    while (doc.hasNextLine()){
+		
 		String line= doc.nextLine();
 		if (line.equals(null)){
 		}
 		String[]split = line.split(",, ");
 		users.add(new User(split[0], split[1], split[2],split[3], split[4], split[5]));
-
 	    }
+	    
 	}
-
+	
+	
 	catch (FileNotFoundException e ){
 	    System.out.println("boo");
 	}
     }
-
-
+    
+    
     public String toString(){
 	String z="";
 	for (int x=0; x<users.size(); x++)
@@ -60,7 +65,9 @@ public class Users {
 	return users.size();
     }
     
-
+    public User getUser(int pos){
+	return users.get(pos);
+    }
    
     /////copied from the basement: (BinSearchIterative function)
     /////used to log in ! 
@@ -87,6 +94,6 @@ public class Users {
 
     public static void main (String[]args){
 	Users test = new Users();
-	System.out.println(test.findUser("raheemzk"));
+	System.out.println(test.findUser("raheemaaa"));
     }
 }
