@@ -1,8 +1,4 @@
 Character:
-write new user information into file
-check if username already taken using text file like Characters.txt (eventually use tree to store characters)
-//encrypt password
-get login working 
 add methods for what books character has checked out, and //what books character is waiting on
 Later: due dates for books?
 
@@ -21,14 +17,9 @@ QuickSort, Binary Search, (Trees)
 -----------
 
 Book:
-- constructer method 
-- had queue as waitlist (get working with arraylist first)
+- has queue as waitlist (get working with arraylist first)
+- toString method has to be updated
 
 Library:
-- add method (uses binary search) to add file into arraylist
 - also rewrites file 
 
-MAKE ISSUES!!!!
-
-update: write user info to a file is ALMOST DONE. (06/03/2014)
-addBook rewrites the file when a book is added (yay!)
