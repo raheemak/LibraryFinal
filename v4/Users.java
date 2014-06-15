@@ -45,18 +45,7 @@ public class Users {
    
     public void addUser(User newUser){
 	users.add(newUser);
-	String newList="";
-	for (int x=0; x<users.size(); x++)
-	    newList+=(users.get(x)+"\n");
-	try{
-	    FileWriter fstream = new FileWriter("Users.txt");
-	    BufferedWriter out = new BufferedWriter(fstream);
-	    out.write(newList);
-	    out.close();
-	}
-	catch (Exception e){
-	    System.err.println("boo");
-	}
+	qsort(users);
     }
  
     public int size(){
@@ -108,6 +97,8 @@ public class Users {
 	}
     }
     
+
+
     
     public static void main (String[]args){
 	Users test = new Users();
@@ -117,4 +108,44 @@ public class Users {
 	System.out.println(test.findUser("289hewkj"));
 	System.out.println(test.findUser("mariak"));*/
     }
+    //////////////////////////////////////
+  public static void qsort( ArrayList<User> d ) {
+	System.out.println("sorting");
+	qsHelp( 0, d.size()-1, d );
+    }
+    public static void qsHelp( int lo, int hi, ArrayList<User> d ) {
+
+	if ( lo >= hi )
+	    return;
+
+	int tmpLo = lo;
+	int tmpHi = hi;
+	User pivot = d.get(lo);
+
+	while( tmpLo < tmpHi ) {
+	    //first, slide markers in as far as possible without swaps
+	    while( d.get(tmpLo).getUsername().compareTo(pivot.getUsername()) < 0) 
+		tmpLo++;
+	    
+	    while( d.get(tmpHi).getUsername().compareTo(pivot.getUsername()) > 0) {
+		tmpHi--;
+	    }
+	    swap( tmpLo, tmpHi, d );
+	}
+
+	//pivot has been floating around... plant it where it belongs
+	d.set(tmpLo, pivot);
+
+	//recurse on lower and upper ranges
+	qsHelp( lo, tmpLo-1, d );
+	qsHelp( tmpLo+1, hi, d );
+
+    }//end qsHelp
+    
+    public static void swap( int x, int y, ArrayList<User> o ) {
+	User tmp = o.get(x);
+	o.set(x,o.get(y));
+	o.set(y, tmp);
+    }
+    ///////////////////
 }

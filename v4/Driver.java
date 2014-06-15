@@ -194,7 +194,7 @@ public class Driver{
 	
 	    }
 	}
-	String directions = "To CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'. To SEARCH for a book, type 'ADD'.\n";
+	String directions = "To CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'. To SEARCH for a book, type 'ADD'.\nTo SEARCH for a book, type 'SEARCH'.\n";
 	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \n"+directions+"At any point, type 'DIRECTIONS' if you need help.\n******** ");
 	while (loggedIn){
 	    System.out.print(currentUser.getUsername()+": "); 
@@ -210,6 +210,7 @@ public class Driver{
 
 	    else if (s.equals("RETURN")){
 		s= scan.nextLine();
+		System.out.print("Title: ");
 	    }
 
 	    else if (s.equals ("DIRECTIONS")){

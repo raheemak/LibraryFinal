@@ -53,18 +53,6 @@ public class Library {
     public void addBook(Book hello){
 	books.add(hello);
 	qsort(books);
-	String newList="";
-	for (int x=0; x<books.size(); x++)
-	    newList+=(books.get(x)+"\n");
-	try{
-	    FileWriter fstream = new FileWriter("Books.txt");
-	    BufferedWriter out = new BufferedWriter(fstream);
-	    out.write(newList);
-	    out.close();
-	}
-	catch (Exception e){
-	    System.err.println("boo");
-	}
     }
  
     public int size(){
@@ -90,15 +78,13 @@ public class Library {
 
 	while( tmpLo < tmpHi ) {
 	    //first, slide markers in as far as possible without swaps
-	    while( d.get(tmpLo).compareTo(pivot) < 0) {
-		System.out.println("2");
+	    while( d.get(tmpLo).compareTo(pivot) < 0) 
 		tmpLo++;
-	    }
+	    
 	    while( d.get(tmpHi).compareTo(pivot) > 0) {
 		System.out.println("3");
 		tmpHi--;
 	    }
-
 	    swap( tmpLo, tmpHi, d );
 	}
 
