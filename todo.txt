@@ -5,7 +5,7 @@ Later: due dates for books?
 Driver:
 access existing memberships to know which books which person has checked out (work w/ Character to get file of existing usernames and encrypted passwords.
 ability to see existing books (with filters? By letter, by author)
-ability to checkout (type checkout and enter)
+checkout where capitalization does not matter -ill do this - raheema
 ability to return (type return and enter)
 
 

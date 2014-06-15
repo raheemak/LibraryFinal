@@ -194,7 +194,7 @@ public class Driver{
 	
 	    }
 	}
-	String directions = "To CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'. To SEARCH for a book, type 'ADD'.\n";
+	String directions = "To CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'. To SEARCH for a book, type 'ADD'.\nTo VIEW the books you have checked out, type 'VIEW'.\nTo view books you are WAITLISTED for, type 'WAITLISTED'.\n";
 	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \n"+directions+"At any point, type 'DIRECTIONS' if you need help.\n******** ");
 	while (loggedIn){
 	    System.out.print(currentUser.getUsername()+": "); 
@@ -214,8 +214,8 @@ public class Driver{
 		    }
 		}
 
-		System.out.print("Please enter the author of the book you wish to check out (with proper capitalization): ");
-		String author = scan.nextLine();
+		System.out.print("Please enter the author of the book you wish to check out: ");
+		String author = scan.nextLine().toUpperCase();
 		if(author.isEmpty()){
 		    while(author.isEmpty()){
 			System.out.print("Please enter the author's name: ");
