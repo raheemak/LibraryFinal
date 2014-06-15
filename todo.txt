@@ -7,16 +7,12 @@ access existing memberships to know which books which person has checked out (wo
 ability to see existing books (with filters? By letter, by author)
 ability to checkout (type checkout and enter)
 ability to return (type return and enter)
-Later: program wide thingy where library knows which user has which books, even if user isn't currently using prgrm.
 
-Book:
 
-QuickSort, Binary Search, (Trees)
 
 
 -----------
 
 Book:
-- has queue as waitlist (get working with arraylist first)
-- toString method has to be updated
+-toString method has to be updated: i'll work on this - raheema
 
