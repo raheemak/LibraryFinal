@@ -168,9 +168,26 @@ public class Library {
 	books.get(pos).setStatus(true);
     }
     
+
+    public void writeFile(){
+	String newList="";
+	for (int x=0; x<books.size(); x++)
+	    newList+=(books.get(x)+"\n");
+	try{
+	    FileWriter fstream = new FileWriter("Books.txt");
+	    BufferedWriter out = new BufferedWriter(fstream);
+	    out.write(newList);
+	    out.close();
+	}
+	catch (Exception e){
+	    System.err.println("boo");
+	}
+    }
+    
+    
     public static void main (String[]args){
 	Library test = new Library();
-	test.makeArray();
+	
 	//Book heya = new Book("Paper Towns, John Green");
 	//test.addBook("Paper Towns", "John Green");
 	//System.out.println(test

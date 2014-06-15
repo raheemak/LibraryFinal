@@ -93,12 +93,28 @@ public class Users {
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////
 
+    public void writeFile(){
+	String newList= "";
+	for (int x=0; x<users.size(); x++)
+	    newList+=(users.get(x)+"\n");
+	try{
+	    FileWriter fstream = new FileWriter("Users.txt");
+	    BufferedWriter out = new BufferedWriter(fstream);
+	    out.write(newList);
+	    out.close();
+	}
+	catch (Exception e){
+	    System.err.println("boo");
+	}
+    }
+    
+    
     public static void main (String[]args){
 	Users test = new Users();
-	System.out.println(test.findUser("s"));
+	/*System.out.println(test.findUser("s"));
 	System.out.println(test.findUser("raheemzk"));
 	System.out.println(test.findUser("funnyfia"));
 	System.out.println(test.findUser("289hewkj"));
-	System.out.println(test.findUser("mariak"));
+	System.out.println(test.findUser("mariak"));*/
     }
 }

@@ -14,6 +14,7 @@ public class Driver{
 	boolean loggedIn= false;
 	int userNumber = 0;
 	boolean newUser=true;
+	Library library = new Library();
 	///////////////////////////////////////////////////
 	
 	System.out.println("Welcome to the-fab-tria Library! Are you a returning user?");
@@ -196,9 +197,19 @@ public class Driver{
 	}
 	
 	if (loggedIn){
+	    System.out.println("Welcome "+currentUser.getUsername()+"! \nTo CHECK OUT a book : type 'CHECK OUT'. \nYour information will not be updated until you log out. \nIn order to LOG OUT, type 'LOG OUT'. \nAt any point, type 'DIRECTIONS' if you need help. ");
 	    
-	    //this is where the actual library things happen !
+	    while (true){
+	        s= scan.nextLine();
+		if (s.equals("LOG OUT")){
+		    library.writeFile();
+		    allUsers.writeFile();
+		    break;
+		}
+		else if (s.equals("CHECK OUT")){
+		}
+	    }
 	}
-    }    
+	
+    }
 }
-

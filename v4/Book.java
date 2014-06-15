@@ -45,7 +45,6 @@ public class Book implements Comparable<Book> {
     }//
     
     public String toString(){
-    	
 	return (getTitle() + ",, "+ getAuthor() + ",, " + getStatus() + ",, " +"<>");
     }
 
