@@ -41,7 +41,7 @@ public class Library {
 
     public void checkOut(String title, String author){
 	Book welcome = new Book(title, author);
-	System.out.println("created book");
+	System.out.println("This book does not yet exist.\n It has been added to the library.\n");
         if(searchBook(books, welcome, 0, size()) == false){
 	    addBook(welcome);
 	}
@@ -119,7 +119,6 @@ public class Library {
 
     public static boolean searchBook(ArrayList<Book> o, Book target, int lo, int hi){
 	boolean found = false;
-	System.out.println("We have not begun the search yet");
 	//int m = (lo + hi) / 2;
 	
 	while(lo <= hi){
@@ -173,6 +172,7 @@ public class Library {
 	}
 	return tPos;
     }
+
     //when a book is returned to the library
     public void returnBook(Book book){
 	int pos= findBook(book.getTitle(), book.getAuthor());

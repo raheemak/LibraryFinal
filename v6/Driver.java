@@ -4,9 +4,26 @@ import java.util.Scanner;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;  
 
+
 public class Driver{
+
+    public static String capitalize (String str){
+	String[]arr= str.split(" ");
+	String fin = "";
+	for (int x=0; x<arr.length; x++){
+	    String curr= arr[x];
+	    fin+=curr.substring(0,1).toUpperCase();
+	    String s= curr.substring(1);
+	    for ( int y=0; y<s.length(); y++){
+		fin+=s.substring(y,y+1).toLowerCase();
+	    }
+	    fin+=" ";
+	}
+	fin=fin.trim();
+	return fin;
+    }
+
     public static void main(String[] args){
-       
 	///////////////////////////////variables///////////
 	Scanner scan = new Scanner(System.in);
 	Users allUsers= new Users();
@@ -17,10 +34,10 @@ public class Driver{
 	Library library = new Library();
 	///////////////////////////////////////////////////
 	
-	System.out.println("Welcome to the-fab-tria Library! Are you a returning user?");
+	System.out.println("********\nWelcome to the-fab-tria Library! Are you a returning user?\n********");
 	System.out.print("Type 'y' for yes or 'n' for no: ");
 	String s  = scan.nextLine();
-	
+	System.out.println("********");
 	while  (!s.equals("y")&&!s.equals("n")){
 	    System.out.print("y or n ?");
 	    s= scan.nextLine();
@@ -39,7 +56,8 @@ public class Driver{
 
 	    while (userNumber==-1){
 		
-		System.out.println("This username does not exist. \nPlease try again. \nType 'new' if you do not have an account.");
+		System.out.println("********\nThis username does not exist. \nPlease try again. \nType 'new' if you do not have an account.\n********");
+		System.out.print("Username: ");
 		s=scan.nextLine();
 		userNumber= allUsers.findUser(s);
 		if (s.equals("new")){
@@ -49,19 +67,19 @@ public class Driver{
 	    }
 	    newUser=false;
 	    if (!newUser){
-		System.out.print("password: ");
+		System.out.print("Password: ");
 		s= scan.nextLine();
 		
 		while(!s.equals(allUsers.getUser(userNumber).getPassword())){
-		    System.out.println("incorrect password!");
-		    System.out.println("password: ");
+		    System.out.println("********\nIncorrect password!\n********");
+		    System.out.print("Password: ");
 		    s= scan.nextLine();
 		}
 		
 		if (s.equals(allUsers.getUser(userNumber).getPassword())){
 		    currentUser= allUsers.getUser(userNumber);
 		    loggedIn= true;
-		    System.out.println(" you are logged in !");
+		    System.out.println("You have logged in!");
 		}
 	    }
     	}
@@ -86,6 +104,7 @@ public class Driver{
 	    
 	    
 	    else if (s.equals("y")){
+		System.out.println("********");
 		System.out.print("Please enter your first name: ");
 		String first = scan.nextLine();
 		if(first.isEmpty()){
@@ -168,7 +187,7 @@ public class Driver{
 			      
 				  catch (UnsupportedEncodingException a)
 				  {
-				  a.printStackTrace();
+ mk				  a.printStackTrace();
 				  }
 			      
 				  //some of the encryption code from http://www.codeobsessed.com/code/viewtopic.php?f=6&t=25
@@ -190,12 +209,13 @@ public class Driver{
 		    //add user to file
 		    allUsers.addUser(currentUser);
 		    loggedIn=true;
+		    allUsers.writeFile();
 		    System.out.println("Congratulations! Your account has been created. ");
-	
+		    System.out.println("********");
 	    }
 	}
-	String directions = "To CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'. To SEARCH for a book, type 'ADD'.\nTo VIEW the books you have checked out, type 'VIEW'.\nTo view books you are WAITLISTED for, type 'WAITLISTED'.\n";
-	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \n"+directions+"At any point, type 'DIRECTIONS' if you need help.\n******** ");
+	String directions = "To CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'.\nTo SEARCH for a book, type 'ADD'.\nTo VIEW the books you have checked out, type 'VIEW'.\nTo view books you are WAITLISTED for, type 'WAITLISTED'.\n";
+	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \n********\n"+directions+"At any point, type 'DIRECTIONS' if you need help.\n******** ");
 	while (loggedIn){
 	    System.out.print(currentUser.getUsername()+": "); 
 	    s= scan.nextLine().toUpperCase();
@@ -222,11 +242,7 @@ public class Driver{
 			author = scan.nextLine();
 		    }
 		}
-
-		//System.out.println(title);
-		//System.out.println(author);
 		library.checkOut(title,author);
-		//System.out.println(library);
 	    }
 		
 
@@ -239,15 +255,47 @@ public class Driver{
 	    }
 
 	    else if (s.equals ("SEARCH")){
+		System.out.print("Title: ");
+		String title=capitalize(scan.nextLine());
+		if (library.findBook(title, "")==-1)
+		    System.out.println ("The book '"+title+"' does not exist.\nType 'ADD' if you would like to add the book to our directory.\n********");
+		else {
+		    System.out.println("This book is in our library. Type 'CHECK OUT' in order to check out.\n********");
+		}
+		
 	    }
+	    
 	    else if (s.equals("ADD")){
+		
+		System.out.print("Title: ");
+
+		String title=capitalize(scan.nextLine());
+		while(title.equals(null)){
+		    System.out.print("Title: ");
+		    title= capitalize(scan.nextLine());
+		}
+		System.out.print("Author: ");
+		String author = capitalize(scan.nextLine());
+		while (author.equals(null)){
+		    System.out.print("Author: ");
+		    author=capitalize(scan.nextLine());
+		}
+		if (library.findBook(title, author)>-1)
+		    System.out.println("This book already exists and cannot be added to the library.\n******** ");
+		else {
+		    Book newB = new Book(title, author);
+		    library.addBook(newB);
+		}
+		
 	    }
+	    //none of the above options 
 	    else {
 		System.out.println("'"+s+"' is not a valid operation.");
 	    }
 	}
-	System.out.println("You have successfully logged out.");
+	System.out.println("********\nYour information has been updated.\nYou have successfully logged out.\n********");
 	//just to add
+
     }
     
 }
