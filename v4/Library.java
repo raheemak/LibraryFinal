@@ -162,13 +162,16 @@ public class Library {
 	}
 	return tPos;
     }
-
+    //when a book is returned to the library
     public void returnBook(Book book){
 	int pos= findBook(book.getTitle(), book.getAuthor());
 	books.get(pos).setStatus(true);
     }
-    
+    //in order to get a book by position
 
+    public Book getBook(int pos){
+	return books.get(pos);
+    }
     public void writeFile(){
 	String newList="";
 	for (int x=0; x<books.size(); x++)
