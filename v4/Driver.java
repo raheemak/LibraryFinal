@@ -198,8 +198,7 @@ public class Driver{
 	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \n"+directions+"At any point, type 'DIRECTIONS' if you need help.\n******** ");
 	while (loggedIn){
 	    System.out.print(currentUser.getUsername()+": "); 
-	    s= scan.nextLine();
-	    System.out.println(s);
+	    s= scan.nextLine().toUpperCase();
 	    if (s.equals("LOG OUT")){
 		library.writeFile();
 		allUsers.writeFile();
@@ -210,6 +209,7 @@ public class Driver{
 	    }
 
 	    else if (s.equals("RETURN")){
+		s= scan.nextLine();
 	    }
 
 	    else if (s.equals ("DIRECTIONS")){
