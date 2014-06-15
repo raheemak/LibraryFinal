@@ -20,6 +20,3 @@ Book:
 - has queue as waitlist (get working with arraylist first)
 - toString method has to be updated
 
-Library:
-- also rewrites file 
-
