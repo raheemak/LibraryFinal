@@ -1,13 +1,14 @@
-A Day No Pigs Would Die,, Robert Newton Peck,, true,, <>
+A Day No Pigs Would Die,, Robert Newton Peck,, false,, <>
 A Night in Terror Tower (Goosebumps series),, R.L. Stine,, true,, <>
 A Prayer for Owen Meany,, John Irving,, true,, <>
 A Shocker on Shock Street (Goosebumps series),, R.L. Stine,, true,, <>
-A Time to Kill,, John Grisham,, true,, <>
+A Time To Kill,, John Grisham,, true,, <>
+A Time to Kill,, John Grisham,, false,, <>
 A Walk To Remember,, Nicholas Sparks,, true,, <>
 A Wrinkle in Time,, Madeline L'Engle,, true,, <>
 ABC,, George Orwell,, true,, <>
 All I Want Is Everything (Gossip Girl series),, Cecily von Ziegesar,, true,, <>
-Always Running,, Luis Rodriguez,, true,, <>
+Always Running,, Luis Rodriguez,, false,, <>
 America: A Novel,, E.R. Frank,, true,, <>
 An Abundance of Katherines,, John Green,, true,, <>
 Anastasia Absolutely (Anastasia series),, Lois Lowry,, true,, <>
@@ -21,7 +22,7 @@ Anastasia's Chosen Career (Anastasia series),, Lois Lowry,, true,, <>
 Anastasia, Ask Your Analyst (Anastasia series),, Lois Lowry,, true,, <>
 And Tango Makes Three,, Justin Richardson/Peter Parnell,, true,, <>
 Angus, Thongs, and Full Frontal Snogging,, Louise Rennison,, true,, <>
-Animal Farm,, George Orwell,, true,, <>
+Animal Farm,, George Orwell,, false,, <>
 Are You There, God?  It's Me, Margaret,, Judy Blume,, true,, <>
 Arming America,, Michael Bellasiles,, true,, <>
 Athletic Shorts,, Chris Crutcher,, true,, <>
@@ -210,6 +211,7 @@ The House of the Spirits,, Isabel Allende,, true,, <>
 The Joy of Gay Sex,, Dr. Charles Silverstein,, true,, <>
 The Kite Runner,, Khaled Hosseini,, true,, <>
 The Last Song,, Nicholas Sparks,, true,, <>
+The Lightning Thief,, Rick Riordan,, true,, <>
 The Lovely Bones,, Alice Sebold,, true,, <>
 The Perks of Being a Wallflower,, Stephen Chbosky,, true,, <>
 The Scarecrow Walks at Midnight (Goosebumps series),, R.L. Stine,, true,, <>

@@ -152,7 +152,52 @@ public class Library {
 	return found;
     }
 
+/////copied from the basement: (BinSearchIterative function)
+    ///used when reading user information
+    ///also used when returning a book
+    ///used when only position needed
+    public  int findBook( String title, String author){
+	int tPos = -1, lo=0, hi= books.size();
 
+	int m = (lo + hi) / 2; 
+
+	while( lo <= hi ) {
+	    m = (lo + hi) / 2;
+	    if ( books.get(m).getTitle().compareTo(title)==0 ) 
+		return m ;
+	    else if ( books.get(m).getTitle().compareTo(title) >0)
+		hi = m - 1; 
+	    else if ( books.get(m).getTitle().compareTo(title)<0)
+		lo = m + 1; 
+
+	}
+	return tPos;
+    }
+    //when a book is returned to the library
+    public void returnBook(Book book){
+	int pos= findBook(book.getTitle(), book.getAuthor());
+	books.get(pos).setStatus(true);
+    }
+    //in order to get a book by position
+
+    public Book getBook(int pos){
+	return books.get(pos);
+    }
+    public void writeFile(){
+	String newList="";
+	for (int x=0; x<books.size(); x++)
+	    newList+=(books.get(x)+"\n");
+	try{
+	    FileWriter fstream = new FileWriter("Books.txt");
+	    BufferedWriter out = new BufferedWriter(fstream);
+	    out.write(newList);
+	    out.close();
+	}
+	catch (Exception e){
+	    System.err.println("boo");
+	}
+    }
+    
     public static void main (String[] args){
 	Library test = new Library();	
 	test.checkOut("Animal Farm", "George Orwell");

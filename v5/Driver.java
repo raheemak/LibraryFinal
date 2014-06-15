@@ -247,6 +247,7 @@ public class Driver{
 	    }
 	}
 	System.out.println("You have successfully logged out.");
+	//just to add
     }
     
 }

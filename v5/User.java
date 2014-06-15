@@ -35,7 +35,7 @@ public class User{
 		//make array [title, author]
 		String[]currBook= books[x].split(",, ");
 		//find book from library (by title and author)  and then add to array 
-		//checkedOut.add(library.getBook(library.findBook(currBook[0], currBook[1])));
+		checkedOut.add(library.getBook(library.findBook(currBook[0], currBook[1])));
 	    }
 	}
     }
