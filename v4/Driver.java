@@ -72,7 +72,6 @@ public class Driver{
 	    System.out.println("*********\nHello and welcome to the-fab-tria Library! We are a new and up in coming library that has been opened for the community. Feel free to become a member to check out books, sign up on wait lists for books you care to read that are not available, and even send us requests for books we can add to our library. All in all we hope you have a great experience and read on!\n***********\n");
 	    System.out.print("Would you like to sign up to become a member? Please type 'y' for yes or 'n' for no: ");
 	    
-	    
 	    s= scan.nextLine();
 	    while  (!s.equals("y")&&!s.equals("n")){
 		System.out.print("y or n ?");
@@ -195,28 +194,34 @@ public class Driver{
 	
 	    }
 	}
-	
-	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \nTo CHECK OUT a book : type 'CHECK OUT'. \nYour information will not be updated until you log out. \nIn order to LOG OUT, type 'LOG OUT'. \nAt any point, type 'DIRECTIONS' if you need help.\n******** ");
+	String directions = "To CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'. To SEARCH for a book, type 'ADD'.\n";
+	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \n"+directions+"At any point, type 'DIRECTIONS' if you need help.\n******** ");
 	while (loggedIn){
 	    System.out.print(currentUser.getUsername()+": "); 
 	    s= scan.nextLine();
+	    System.out.println(s);
 	    if (s.equals("LOG OUT")){
 		library.writeFile();
 		allUsers.writeFile();
 		loggedIn=false;
 	    }
 	    else if (s.equals("CHECK OUT")){
+		
 	    }
 
 	    else if (s.equals("RETURN")){
 	    }
 
 	    else if (s.equals ("DIRECTIONS")){
+		System.out.println("********\n"+directions+"********");
 	    }
 
 	    else if (s.equals ("SEARCH")){
 	    }
 	    else if (s.equals("ADD")){
+	    }
+	    else {
+		System.out.println("'"+s+"' is not a valid operation.");
 	    }
 	}
 	System.out.println("You have successfully logged out.");
