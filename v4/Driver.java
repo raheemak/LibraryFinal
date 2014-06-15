@@ -199,13 +199,24 @@ public class Driver{
 	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \nTo CHECK OUT a book : type 'CHECK OUT'. \nYour information will not be updated until you log out. \nIn order to LOG OUT, type 'LOG OUT'. \nAt any point, type 'DIRECTIONS' if you need help.\n******** ");
 	while (loggedIn){
 	    System.out.print(currentUser.getUsername()+": "); 
-	s= scan.nextLine();
+	    s= scan.nextLine();
 	    if (s.equals("LOG OUT")){
 		library.writeFile();
 		allUsers.writeFile();
 		loggedIn=false;
 	    }
 	    else if (s.equals("CHECK OUT")){
+	    }
+
+	    else if (s.equals("RETURN")){
+	    }
+
+	    else if (s.equals ("DIRECTIONS")){
+	    }
+
+	    else if (s.equals ("SEARCH")){
+	    }
+	    else if (s.equals("ADD")){
 	    }
 	}
 	System.out.println("You have successfully logged out.");
