@@ -50,6 +50,7 @@ Weekend 6/6- 6/8
 6/10
 	todos collaborated. binary search to find a book is done and checked. when creating a new account/logging in : 
 	function to find username (binary) is writter, not working. 
+	Fia: scrapped password encryption, but made sure that returning users are recognized and are able to log in along with Maria and Raheema.
 
 6/14
 	Maria: I took the basement code for binSearch and modified it so that it compares a target book with the books in the library. The binsearch method is called at the top of the addBook method so that first we can check if the book exists, that the user is requesting. If the book does not exist then a new book is created with the information the user provides and the user checks out the book. BinSearch allows a user to automatically check out a book that already exists. If a new book is added the sorting method is called to make sure the books stay in alphabetical order.
@@ -58,3 +59,6 @@ Weekend 6/6- 6/8
 	
 6/15	Maria: I consulted with Raheema about various parts of the code and let her and Fia know what I thought needed to be changed or scrapped.
 	
+6/16
+	Fia: We now know exactly what problems we have with the code, and luckily, the design isn't fundamentally flawed, so we can still fix it without too much trouble later on. Here's what we're stuck with, though:
+	typing in return gives a forever loop. The reason is because if we were to add a return method in Library.java, we'd also need to add a lot to Library, because checking out a book doesn't actually add the book to the user's list of books (which is why view books also doesn't work); checking out just adds a book to the library if whatever the user wants to check out isn't there. typing view or waitlisted, to see which books the user has checked out or what books the user has waitlisted gives the error message, because of the issue stated before.
