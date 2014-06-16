@@ -3,10 +3,8 @@ A Night in Terror Tower (Goosebumps series),, R.L. Stine,, true,, <>
 A Prayer for Owen Meany,, John Irving,, true,, <>
 A Shocker on Shock Street (Goosebumps series),, R.L. Stine,, true,, <>
 A Time To Kill,, John Grisham,, true,, <>
-A Time to Kill,, John Grisham,, false,, <>
 A Walk To Remember,, Nicholas Sparks,, true,, <>
 A Wrinkle in Time,, Madeline L'Engle,, true,, <>
-ABC,, George Orwell,, true,, <>
 All I Want Is Everything (Gossip Girl series),, Cecily von Ziegesar,, true,, <>
 Always Running,, Luis Rodriguez,, false,, <>
 America: A Novel,, E.R. Frank,, true,, <>
@@ -242,7 +240,6 @@ You Can't Scare Me! (Goosebumps series),, R.L. Stine,, true,, <>
 You Hear Me?,, Betsy Franco,, true,, <>
 You Know You Love Me (Gossip Girl series),, Cecily von Ziegesar,, true,, <>
 You're the One That I Want (Gossip Girl series),, Cecily von Ziegesar,, true,, <>
-hello,, George Orwell,, true,, <>
 l8r g8r (Internet Girls series),, Lauren Myracle,, true,, <>
 ttfn (Internet Girls series),, Lauren Myracle,, true,, <>
 ttyl (Internet Girls series),, Lauren Myracle,, true,, <>
