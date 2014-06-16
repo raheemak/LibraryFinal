@@ -214,7 +214,7 @@ public class Driver{
 		    System.out.println("********");
 	    }
 	}
-	String directions = "To CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'.\nTo SEARCH for a book, type 'ADD'.\nTo VIEW the books you have checked out, type 'VIEW'.\nTo view books you are WAITLISTED for, type 'WAITLISTED'.\n";
+	String directions = "At any time if you which to LOG OUT type 'LOG OUT' (as you always should when quitting in order to safely preserve all your information. \nTo CHECKOUT a book, type 'CHECK OUT'. \nTo RETURN a book, type 'RETURN'.\nTo ADD a book to our directory, type 'ADD'.\nTo SEARCH for a book, type 'ADD'.\nTo VIEW the books you have checked out, type 'VIEW'.\nTo view books you are WAITLISTED for, type 'WAITLISTED'.\n";
 	System.out.println("********\nWelcome "+currentUser.getUsername()+"! \n********\n"+directions+"At any point, type 'DIRECTIONS' if you need help.\n******** ");
 	while (loggedIn){
 	    System.out.print(currentUser.getUsername()+": "); 
