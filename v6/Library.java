@@ -41,7 +41,6 @@ public class Library {
 
     public void checkOut(String title, String author){
 	Book welcome = new Book(title, author);
-	System.out.println("This book does not yet exist.\n It has been added to the library.\n");
         if(searchBook(books, welcome, 0, size()) == false){
 	    addBook(welcome);
 	}
@@ -53,6 +52,7 @@ public class Library {
     public void addBook(Book hello){
     	books.add(hello);
 	qsort(books);
+	System.out.println("Thank you for checking out " + hello.getTitle() + ". Originally we did not have this book in our library, but have now added it at your request. Thank you for your contribution!");
 	String newList="";
 	for (int x=0; x<books.size(); x++)
 	    newList+=(books.get(x)+"\n");
@@ -76,7 +76,7 @@ public class Library {
      * @param d -- array of ints to be sorted in place
      *****************************************************/
     public static void qsort( ArrayList<Book> d ) {
-	System.out.println("sorting");
+	//System.out.println("sorting");
 	qsHelp( 0, d.size()-1, d );
     }
     public static void qsHelp( int lo, int hi, ArrayList<Book> d ) {
