@@ -110,6 +110,7 @@ public class Library {
 	qsHelp( tmpLo+1, hi, d );
 
     }//end qsHelp
+    //qsort taken from the basement!
 
     public static void swap( int x, int y, ArrayList<Book> o ) {
 	Book tmp = o.get(x);
@@ -150,6 +151,7 @@ public class Library {
 		
 	return found;
     }
+    //code taken from the basement!
 
 /////copied from the basement: (BinSearchIterative function)
     ///used when reading user information
