@@ -125,7 +125,7 @@ public class Library {
 	while(lo <= hi){
 	    int m = (lo + hi) / 2;
 	    if (o.get(m).compareTo(target) == 0){
-		System.out.println("Book has been found");
+		//System.out.println("Book has been found");
 		found = true;
 		if(o.get(m).getStatus() == true){
 		    o.get(m).setStatus(false);
