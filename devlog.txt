@@ -40,6 +40,7 @@ devlog created
 	
 6/03:
 	lol
+	Maria: in class worked (and I believe finished) transfering the code for qsort from the basement to the library. Now the code works to sort books based on the compareTo method I wrote in the book class, which calls the compareTo String method on the titles of the books being compared. Qsort sorts the books in alphabetical order and Raheema has made it so after being sorted the file Books.txt gets rewritten so that it is also in alphabetical order.
 
 Weekend 6/6- 6/8
 	Raheema: From the file, books checked out can be read in
@@ -50,4 +51,10 @@ Weekend 6/6- 6/8
 	todos collaborated. binary search to find a book is done and checked. when creating a new account/logging in : 
 	function to find username (binary) is writter, not working. 
 
+6/14
+	Maria: I took the basement code for binSearch and modified it so that it compares a target book with the books in the library. The binsearch method is called at the top of the addBook method so that first we can check if the book exists, that the user is requesting. If the book does not exist then a new book is created with the information the user provides and the user checks out the book. BinSearch allows a user to automatically check out a book that already exists. If a new book is added the sorting method is called to make sure the books stay in alphabetical order.
+	But then I decided that it might be better to have a checkOut method that just calls the search method and the addBook method. So I created the checkOut method, however, when I tried to run the code there was an error in the User.java file and because I did not write that file and I did not want to mess up any code I waited for Raheema to check it out and she let me know when it was fixed. Then I ran my code but adding a Book was not working properly although I believe that searchBook was working fine. However, in the previous version addBook was working. So I opened up v3 and v4 simultaionously and edited v3 until it looked like v4 and while v3 now worked v4 still had its issues. 
+	So I copied the files I was editing from v3 that worked to v5 (staying up until 4 or 5 in the morning). Now a user could type CHECK OUT, the name of the book, the author and check it out whether or not it existed (it would be added to the library if it did not exist).
+	
+6/15	Maria: I consulted with Raheema about various parts of the code and let her and Fia know what I thought needed to be changed or scrapped.
 	
