@@ -1,0 +1,163 @@
+import java.util.*;
+import java.io.*;
+
+public class Library {
+    
+
+    private ArrayList<Book>  books= new ArrayList<Book>(); 
+    private int size ;    
+    public Library (){
+	makeArray();
+	writeFile();
+    }
+
+    //reading csv file 
+    public  void  makeArray(){
+	//236 books, 2 fields each 
+	try {
+	    File file = new File("Books.txt");
+	    Scanner doc= new Scanner (file);
+	    while (doc.hasNextLine()){
+		String line= doc.nextLine();
+		if (line.equals(null)){
+		}
+		String[]split = line.split(",, ");
+		books.add(new Book(split[0], split[1],split[2],split[3]));
+		    }
+	}
+	
+	catch (FileNotFoundException e ){
+	    System.out.println("boo");
+	}
+	//qsort(books);
+    }
+
+
+    public String toString(){ 
+	String z="";
+	for (int x=0; x<books.size(); x++)
+	    z+=(books.get(x)+"\n");
+	return z;
+    }
+    
+    public void checkOut(int pos){
+	//user only needed when waitlisting
+	Book book= books.get(pos);
+	book.setStatus(false);
+    }	
+    
+    /*add book to library 
+      - check if book already exists
+      - place in order*/
+    public void addBook(Book hello){
+	    books.add(hello);
+	    qsort(books);
+	    System.out.println("--\n Library directory will be updated once you LOG OUT. \n--");
+    }
+    
+    public int size(){
+	return books.size();
+    }
+    
+
+
+    /*****************************************************
+     * void qsort(int[])
+     * @param d -- array of ints to be sorted in place
+     *****************************************************/
+    public  void qsort( ArrayList<Book> d ) {
+	qsHelp( 0, books.size()-1 );
+    }
+    public  void qsHelp( int lo, int hi ) {
+	if ( lo >= hi )
+	    return;
+
+	int tmpLo = lo;
+	int tmpHi = hi;
+	Book pivot = books.get(lo);	   
+
+	while( tmpLo < tmpHi ) {
+	    //first, slide markers in as far as possible without swaps
+	    while( books.get(tmpLo).compareTo(pivot) < 0) 
+		tmpLo++;
+	    while( books.get(tmpHi).compareTo(pivot) > 0) 
+		tmpHi--;
+	    
+	    swap( tmpLo, tmpHi );
+	}
+
+	//pivot has been floating around... plant it where it belongs
+	books.set(tmpLo, pivot);
+
+	//recurse on lower and upper ranges
+	qsHelp( lo, tmpLo-1 );
+	qsHelp( tmpLo+1, hi );
+
+    }//end qsHelp
+    //qsort taken from the basement!
+
+    public  void swap( int x, int y) {
+	Book tmp = books.get(x);
+	books.set(x,books.get(y));
+	books.set(y, tmp);
+    }
+    //////////////////////////////////////////////////////////////////////
+  
+    /////copied from the basement: (BinSearch Iterative);
+    public  int findBook( String title, String author){
+	Book temp = new Book (title, author);
+	int tPos = -1, lo=0, hi= books.size();
+
+	int m = (lo + hi) / 2; 
+
+	while( lo <= hi ) {
+	    m = (lo + hi) / 2;
+	    if (m>= books.size())
+		return -1;
+	    if ( books.get(m).compareTo(temp)==0 ) 
+		return m ;
+	    else if ( books.get(m).compareTo(temp) >0)
+		hi = m - 1; 
+	    else if ( books.get(m).compareTo(temp)<0)
+		lo = m + 1; 
+
+	}
+	return tPos;
+    }
+
+    public void setStatusofBook(int pos, boolean status){
+	books.get(pos).setStatus(status);
+    }
+    //when a book is returned to the library
+    public void returnBook(Book book){
+	int pos= findBook(book.getTitle(), book.getAuthor());
+	books.get(pos).setStatus(true);
+    }
+    //in order to get a book by position
+
+    public Book getBook(int pos){
+	return books.get(pos);
+    }
+    public void writeFile(){
+	String newList="";
+	for (int x=0; x<books.size(); x++)
+	    newList+=(books.get(x)+"\n");
+	try{
+	    FileWriter fstream = new FileWriter("Books.txt");
+	    BufferedWriter out = new BufferedWriter(fstream);
+	    out.write(newList);
+	    out.close();
+	}
+	catch (Exception e){
+	    System.err.println("boo");
+	}
+    }
+    
+    
+    public static void main (String[] args){
+	Library test = new Library();
+	
+    }
+    
+    
+}
